@@ -40,6 +40,9 @@ COORD2 = get_transition_matrix(pi).dot(AGESK_COORD)
 
 heights = []
 a = 6378.136
+
+# Поиск B, L, H
+# ==========================================================
 for coord in [COORD1, COORD2]:
     x, y, z = coord[0][0], coord[1][0], coord[2][0]
     D = math.hypot(x, y)
@@ -80,12 +83,13 @@ for coord in [COORD1, COORD2]:
             H = D * cos(B) + z * sin(B) - a * sqrt(1 - ez_sqr * sin(B) ** 2)
 
     heights.append(H)
+# ==========================================================
 
+# Расчёт плотности при разных уровнях солнечной активности
+# =====================================================================================
 density_table = []
-
 for h in heights:
     table = None
-    print(h)
     if 120 <= h <= 500:
         table = table1
     density_table.clear()
@@ -102,15 +106,14 @@ for h in heights:
         density_H = get_density_H(H=h, a0=a0, a1=a1, a2=a2, a3=a3, a4=a4, a5=a5, a6=a6)
         density = get_density(density_H=density_H, K0=1, K1=0, K2=0, K3=0, K4=0)
         density_table.append((F0, density))
+# =====================================================================================
 
-
-print(density_table)
+# Вычисление S, T, W
+# ========================================
 S_list = []
 T_list = []
 W_list = []
 F0_list = [i[0] for i in density_table]
-
-# S, T, W
 for F0, density in density_table:
     S = -1 * SIGMA_X * density * V * Vr
     T = -1 * SIGMA_X * density * V * Vt
@@ -119,8 +122,9 @@ for F0, density in density_table:
     S_list.append(S)
     T_list.append(T)
     W_list.append(W)
+# ========================================
 
-# Charts
+# Построение графиков
 # ==================================================================================================================
 build_chart(title=f'ρ(F0), H={H} km', xlabel='F0', ylabel='ρ', x_data=F0_list, y_data=[i[1] for i in density_table])
 build_chart(title=f'S(F0), H={H} km', xlabel='F0', ylabel='S', x_data=F0_list, y_data=S_list)
