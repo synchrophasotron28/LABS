@@ -22,8 +22,6 @@ get_r = lambda a, e, E: a * (1 - e * cos(E))
 get_p = lambda a, e: a * (1 - e ** 2)
 get_Vr = lambda p, theta, e: sqrt(μ / p) * e * sin(theta)
 get_Vt = lambda p, theta, e: sqrt(μ / p) * (1 + e * cos(theta))
-
-
 # =======================================================================
 
 
