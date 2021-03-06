@@ -1,94 +1,45 @@
-from math import cos, sin, atan, tan, radians, fabs, sqrt, pi
-import math
-import numpy as np
+from AtmosphericDensityModelCoefficients import table1
+from functions import *
+from constant_data import *
 
-# КОНСТАНТЫ
-# -----------------------------------
-μ = 398603
-R = 6371
-# -----------------------------------
-
-
-# ИСХОДНЫЕ ДАННЫЕ
-# -----------------------------------
-apocenter_height = 350  # Hа
-pericenter_height = 240  # Hп
-mood = radians(10)  # i
-ascending_node_longitude = radians(5)  # 𝛀
-pericenter_argument = radians(0)  # ω
-mean_anomaly = radians(60)  # M
-# -----------------------------------
-
-
-get_a = lambda ra, rp: 0.5 * (ra + rp)
-get_e = lambda ra, rp, a: (ra - rp) / (2 * a)
-get_theta = lambda e, E: 2 * atan(sqrt((1 + e) / (1 - e)) * tan(E / 2))
-get_r = lambda a, e, E: a * (1 - e * cos(E))
-
-get_p = lambda a, e: a * (1 - e ** 2)
-get_Vr = lambda p, theta, e: sqrt(μ / p) * e * sin(theta)
-get_Vt = lambda p, theta, e: sqrt(μ / p) * (1 + e * cos(theta))
-
-
-def get_agesk(theta, ra, i, big_omega, omega):
-    X = ra * (cos(omega + theta) * cos(big_omega) - sin(theta + omega) * sin(big_omega) * cos(i))
-    Y = ra * (cos(omega + theta) * sin(big_omega) + sin(theta + omega) * cos(big_omega) * cos(i))
-    Z = ra * sin(omega + theta) * sin(i)
-    return X, Y, Z
-
-
-def find_E(e, M, error=1e-3):
-    E1 = M
-    E2 = M + e * sin(E1)
-    while fabs(E2 - E1) > error:
-        E1 = E2
-        E2 = M + e * sin(E1)
-    return E1
-
-
+# большая полуось(а)
+# эксцентриситет(е)
+# эксцентрическая аномалия(E)
+# истинная аномалия(theta)
+# модуль радиус-вектора КА в АГЭСК(Ra)
+# ===============================================================
 a = get_a(ra=R + apocenter_height, rp=R + pericenter_height)
 e = get_e(ra=R + apocenter_height, rp=R + pericenter_height, a=a)
 E = find_E(e=e, M=mean_anomaly)
 theta = get_theta(e=e, E=E)
 Ra = get_r(a=a, e=e, E=E)
+# ===============================================================
 
-print('a =', a)
-print('e =', e)
-print('E =', math.degrees(E))
-print('theta =', math.degrees(theta))
-print('Ra =', Ra)
+# фокальный параметр (p)
+# радиальная составляющая вектора скорости (Vr)
+# трансверсальная составляющая вектора скорости (Vr)
+# модуль веткора скорости (V)
+# ==================================================
+p = get_p(a=a, e=e)
+Vr = get_Vr(p=p, theta=theta, e=e)
+Vt = get_Vt(p=p, theta=theta, e=e)
+V = math.hypot(Vr, Vt)
+# ==================================================
 
+# АГЭСК
+# ===============================================================================================================
 Xa, Ya, Za = get_agesk(theta=theta, ra=Ra, i=mood, big_omega=ascending_node_longitude, omega=pericenter_argument)
+AGESK_COORD = np.array([[Xa], [Ya], [Za]])
+# ===============================================================================================================
 
-AGESK_COORD = np.array([
-    [Xa],
-    [Ya],
-    [Za]
-])
-
-print(AGESK_COORD)
-
-
-def get_transition_matrix(S):
-    matrix = np.array([
-        [cos(S), sin(S), 0],
-        [-sin(S), cos(S), 0],
-        [0, 0, 1],
-    ])
-    return matrix
-
-
-T = 86164.090530833  # seconds
-Rate = 2 * pi / T
-
+# ГСК
+# =================================================
 COORD1 = get_transition_matrix(0).dot(AGESK_COORD)
 COORD2 = get_transition_matrix(pi).dot(AGESK_COORD)
-
-a = 6378136 / 1e3
-ez_sqr = 0.0067385254
+# =================================================
 
 heights = []
-
+a = 6378.136
 for coord in [COORD1, COORD2]:
     x, y, z = coord[0][0], coord[1][0], coord[2][0]
     D = math.hypot(x, y)
@@ -130,10 +81,49 @@ for coord in [COORD1, COORD2]:
 
     heights.append(H)
 
-get_density = lambda density_H, K0, K1, K2, K3, K4: density_H * K0 * (1 + K1 + K2 + K3 + K4)
+density_table = []
+
+for h in heights:
+    table = None
+    print(h)
+    if 120 <= h <= 500:
+        table = table1
+    density_table.clear()
+    for column in range(len(table['F0'])):
+        F0 = table['F0'][column]
+        a0 = table['a0'][column]
+        a1 = table['a1'][column]
+        a2 = table['a2'][column]
+        a3 = table['a3'][column]
+        a4 = table['a4'][column]
+        a5 = table['a5'][column]
+        a6 = table['a6'][column]
+
+        density_H = get_density_H(H=h, a0=a0, a1=a1, a2=a2, a3=a3, a4=a4, a5=a5, a6=a6)
+        density = get_density(density_H=density_H, K0=1, K1=0, K2=0, K3=0, K4=0)
+        density_table.append((F0, density))
 
 
-def get_density_H(H, a0, a1, a2, a3, a4, a5, a6):
-    density_0 = 1.58868 * 1e-8
-    power_value = a0 + a1 * H + a2 * pow(H, 2) + a3 * pow(H, 3) + a4 * pow(H, 4) + a5 * pow(H, 5) + a6 * pow(H, 6)
-    return density_0 * math.exp(power_value)
+print(density_table)
+S_list = []
+T_list = []
+W_list = []
+F0_list = [i[0] for i in density_table]
+
+# S, T, W
+for F0, density in density_table:
+    S = -1 * SIGMA_X * density * V * Vr
+    T = -1 * SIGMA_X * density * V * Vt
+    W = 0
+
+    S_list.append(S)
+    T_list.append(T)
+    W_list.append(W)
+
+# Charts
+# ==================================================================================================================
+build_chart(title=f'ρ(F0), H={H} km', xlabel='F0', ylabel='ρ', x_data=F0_list, y_data=[i[1] for i in density_table])
+build_chart(title=f'S(F0), H={H} km', xlabel='F0', ylabel='S', x_data=F0_list, y_data=S_list)
+build_chart(title=f'T(F0), H={H} km', xlabel='F0', ylabel='T', x_data=F0_list, y_data=T_list)
+build_chart(title=f'W(F0), H={H} km', xlabel='F0', ylabel='W', x_data=F0_list, y_data=W_list)
+# ==================================================================================================================
