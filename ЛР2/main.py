@@ -105,6 +105,7 @@ for h in heights:
 
         density_H = get_density_H(H=h, a0=a0, a1=a1, a2=a2, a3=a3, a4=a4, a5=a5, a6=a6)
         density = get_density(density_H=density_H, K0=1, K1=0, K2=0, K3=0, K4=0)
+        density /= 1e-9
         density_table.append((F0, density))
 # =====================================================================================
 
@@ -124,9 +125,10 @@ for F0, density in density_table:
     W_list.append(W)
 # ========================================
 
+H = round(H, 2)
 # Построение графиков
 # ==================================================================================================================
-build_chart(title=f'ρ(F0), H={H} km', xlabel='F0', ylabel='ρ', x_data=F0_list, y_data=[i[1] for i in density_table])
+build_chart(title=f'ρ(F0), H={H} km', xlabel='F0', ylabel='ρ', x_data=F0_list, y_data=[i[1] * 1e-9 for i in density_table])
 build_chart(title=f'S(F0), H={H} km', xlabel='F0', ylabel='S', x_data=F0_list, y_data=S_list)
 build_chart(title=f'T(F0), H={H} km', xlabel='F0', ylabel='T', x_data=F0_list, y_data=T_list)
 build_chart(title=f'W(F0), H={H} km', xlabel='F0', ylabel='W', x_data=F0_list, y_data=W_list)
