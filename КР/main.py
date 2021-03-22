@@ -19,6 +19,7 @@ omega = 0
 tau = 0
 r = get_r(p=p, e=e, theta=theta_list[0])
 
+
 p_list.append(p)
 OMEGA_list.append(OMEGA)
 omega_list.append(omega)
@@ -32,11 +33,13 @@ def iterative_loop():
     r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
 
     for theta in theta_list:
+        print(theta)
         # Компоненты возмущающих ускорений
         # ===============================
         T = T1(r=r, i=i, u=theta + omega)
         S = S1(r=r, i=i, u=theta + omega)
         W = W1(r=r, i=i, u=theta + omega)
+        # T = S = W = 0
         # ===============================
 
         # Радиус
@@ -55,8 +58,6 @@ def iterative_loop():
         omega1 = R_omega(F=F, S=S, theta=theta, e=e, T=T, r=r, p=p, W=W, i=i, u=theta + omega) + omega * d_theta
         e1 = R_e(F=F, S=S, theta=theta, T=T, r=r, p=p, e=e) + e * d_theta
         tau1 = R_tau(F=F, p=p) + tau * d_theta
-
-        print(R_e(F=F, S=S, theta=theta, T=T, r=r, p=p, e=e))
         # ======================================================================================================
 
         # Занесение новых данных в контейнеры
