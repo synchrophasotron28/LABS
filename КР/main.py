@@ -11,6 +11,9 @@ i_list = []
 omega_list = []
 e_list = []
 tau_list = []
+S_list = []
+T_list = []
+W_list = []
 
 a = get_a(ra=Earth_radius + h_a, rp=Earth_radius + h_p)
 e = get_e(ra=Earth_radius + h_a, rp=Earth_radius + h_p, a=a)
@@ -18,7 +21,6 @@ p = get_p(a=a, e=e)
 omega = 0
 tau = 0
 r = get_r(p=p, e=e, theta=theta_list[0])
-
 
 p_list.append(p)
 OMEGA_list.append(OMEGA)
@@ -33,13 +35,16 @@ def iterative_loop():
     r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
 
     for theta in theta_list:
-        print(theta)
         # Компоненты возмущающих ускорений
         # ===============================
         T = T1(r=r, i=i, u=theta + omega)
         S = S1(r=r, i=i, u=theta + omega)
         W = W1(r=r, i=i, u=theta + omega)
         # T = S = W = 0
+        S_list.append(S)
+        T_list.append(T)
+        W_list.append(W)
+
         # ===============================
 
         # Радиус
@@ -52,12 +57,12 @@ def iterative_loop():
 
         # Новые элементы
         # ======================================================================================================
-        p1 = R_p(r=r, T=T, F=F) + p * d_theta
-        OMEGA1 = R_OMEGA(W=W, F=F, r=r, p=p, u=theta + omega, i=i) + OMEGA * d_theta
-        i1 = R_i(W=W, F=F, r=r, p=p, u=theta + omega) + i * d_theta
-        omega1 = R_omega(F=F, S=S, theta=theta, e=e, T=T, r=r, p=p, W=W, i=i, u=theta + omega) + omega * d_theta
-        e1 = R_e(F=F, S=S, theta=theta, T=T, r=r, p=p, e=e) + e * d_theta
-        tau1 = R_tau(F=F, p=p) + tau * d_theta
+        p1 = p + R_p(r=r, T=T, F=F) * d_theta
+        OMEGA1 = OMEGA + R_OMEGA(W=W, F=F, r=r, p=p, u=theta + omega, i=i) * d_theta
+        i1 = i + R_i(W=W, F=F, r=r, p=p, u=theta + omega) * d_theta
+        omega1 = omega + R_omega(F=F, S=S, theta=theta, e=e, T=T, r=r, p=p, W=W, i=i, u=theta + omega) * d_theta
+        e1 = e + R_e(F=F, S=S, theta=theta, T=T, r=r, p=p, e=e) * d_theta
+        tau1 = tau + R_tau(F=F, p=p) * d_theta
         # ======================================================================================================
 
         # Занесение новых данных в контейнеры
@@ -74,20 +79,34 @@ def iterative_loop():
 
 
 def chart(x, y, title='', xlabel='', ylabel=''):
-    plt.plot(x, y)
+    plt.plot(x, y, linewidth=1)
+    if title == 'r(θ)':
+        plt.plot(0, 0, marker='.', markersize=30, color='green', markerfacecolor='lightgreen')
+        plt.plot(x[0], y[0], marker='.', markersize=20, color='blue', markerfacecolor='blue')
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.title(title)
     plt.grid(True)
+    plt.savefig('./charts/{}.png'.format(title.split(' ')[0]))
     plt.show()
 
 
 def main():
     iterative_loop()
+    x = [r_list[i] * math.cos(theta_list[i]) for i in range(len(theta_list))]
+    y = [r_list[i] * math.sin(theta_list[i]) for i in range(len(theta_list))]
 
-    x = [r_list[i] * math.cos(theta_list[i]) for i in range(len(theta_list[:10]))]
-    y = [r_list[i] * math.sin(theta_list[i]) for i in range(len(theta_list[:10]))]
-    chart(x=x, y=y)
+    chart(x=x, y=y, title='r(θ)', xlabel='x, км', ylabel='y, км')
+    chart(x=theta_list, y=e_list[:len(theta_list)], title='e(θ)', xlabel='θ, рад', ylabel='e')
+    chart(x=theta_list, y=i_list[:len(theta_list)], title='i(θ)', xlabel='θ, рад', ylabel='i, рад')
+    chart(x=theta_list, y=p_list[:len(theta_list)], title='p(θ)', xlabel='θ, рад', ylabel='p, км')
+    chart(x=theta_list, y=OMEGA_list[:len(theta_list)], title='Ω(θ)', xlabel='θ, рад', ylabel='Ω, рад')
+    chart(x=theta_list, y=omega_list[:len(theta_list)], title='ω(θ)', xlabel='θ, рад', ylabel='ω, рад')
+    chart(x=theta_list, y=tau_list[:len(theta_list)], title='τ(θ)', xlabel='θ, рад', ylabel='τ, час')
+
+    chart(x=theta_list, y=S_list[:len(theta_list)], title='S(θ)', xlabel='θ, рад', ylabel='S, ##')
+    chart(x=theta_list, y=T_list[:len(theta_list)], title='T(θ)', xlabel='θ, рад', ylabel='T, ##')
+    chart(x=theta_list, y=W_list[:len(theta_list)], title='W(θ)', xlabel='θ, рад', ylabel='W, ##')
 
 
 if __name__ == '__main__':

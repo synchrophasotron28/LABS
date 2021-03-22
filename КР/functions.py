@@ -12,11 +12,16 @@ W1 = lambda r, i, u: -Epsilon / r ** 4 * math.sin(2 * i) * math.sin(u)
 # Правые части диф уравнений метода оскулирующих элементов
 # =====================================================================================================================
 R_p = lambda r, T, F: 2 * r * T * F
+
 R_OMEGA = lambda W, F, r, p, u, i: W * F * r / p * math.sin(u) / math.sin(i)
+
 R_i = lambda W, F, r, p, u: W * F * r / p * math.cos(u)
+
 R_omega = lambda F, S, theta, e, T, r, p, W, i, u: F * (
         -S * math.cos(theta) / e + T * (1 + r / p) * math.sin(theta) / e - W * r / p * (1 / math.tan(i)) * math.sin(u))
+
 R_e = lambda F, S, theta, T, r, p, e: F * (S * math.sin(theta) + T * ((1 + r / p) * math.cos(theta) + e * r / p))
+
 R_tau = lambda F, p: F * math.sqrt(398603 / p)
 
 geT_F = lambda r, S, T, theta, e, p: (398603 / r ** 2 + S * math.cos(theta) / e - T * (1 + r / p) * math.sin(

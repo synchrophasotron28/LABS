@@ -14,5 +14,5 @@ C_xa = 3.5
 Fa = 125
 # ======================
 
-d_theta = 0.05
+d_theta = 1e-2
 Earth_radius = 6371
