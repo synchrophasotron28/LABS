@@ -87,7 +87,9 @@ def chart(x, y, title='', xlabel='', ylabel=''):
     plt.ylabel(ylabel)
     plt.title(title)
     plt.grid(True)
-    plt.savefig('./charts/{}.png'.format(title.split(' ')[0]))
+    if title == 'ω(θ)':
+        title = 'ω (θ)'
+    plt.savefig('./charts/{}.png'.format(title))
     plt.show()
 
 
@@ -104,9 +106,9 @@ def main():
     chart(x=theta_list, y=omega_list[:len(theta_list)], title='ω(θ)', xlabel='θ, рад', ylabel='ω, рад')
     chart(x=theta_list, y=tau_list[:len(theta_list)], title='τ(θ)', xlabel='θ, рад', ylabel='τ, час')
 
-    chart(x=theta_list, y=S_list[:len(theta_list)], title='S(θ)', xlabel='θ, рад', ylabel='S, ##')
-    chart(x=theta_list, y=T_list[:len(theta_list)], title='T(θ)', xlabel='θ, рад', ylabel='T, ##')
-    chart(x=theta_list, y=W_list[:len(theta_list)], title='W(θ)', xlabel='θ, рад', ylabel='W, ##')
+    chart(x=theta_list, y=S_list[:len(theta_list)], title='S(θ)', xlabel='θ, рад', ylabel='S, км/ч^2')
+    chart(x=theta_list, y=T_list[:len(theta_list)], title='T(θ)', xlabel='θ, рад', ylabel='T, км/ч^2')
+    chart(x=theta_list, y=W_list[:len(theta_list)], title='W(θ)', xlabel='θ, рад', ylabel='W, км/ч^2')
 
 
 if __name__ == '__main__':
