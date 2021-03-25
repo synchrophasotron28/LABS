@@ -3,7 +3,8 @@ from functions import *
 import numpy as np
 import matplotlib.pyplot as plt
 
-theta_list = list(np.arange(0, 2 * math.pi + d_theta, d_theta))
+revolutions = 8  # Количество оборотов
+theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []
 OMEGA_list = []
@@ -15,12 +16,16 @@ S_list = []
 T_list = []
 W_list = []
 
+# НАЧАЛЬНЫЕ ЗНАЧЕНИЯ
+# ==========================================================
 a = get_a(ra=Earth_radius + h_a, rp=Earth_radius + h_p)
 e = get_e(ra=Earth_radius + h_a, rp=Earth_radius + h_p, a=a)
 p = get_p(a=a, e=e)
 omega = 0
 tau = 0
 r = get_r(p=p, e=e, theta=theta_list[0])
+# ==========================================================
+
 
 p_list.append(p)
 OMEGA_list.append(OMEGA)
