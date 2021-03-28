@@ -36,6 +36,9 @@ i_list.append(i)
 e_list.append(e)
 tau_list.append(tau)
 
+H_list = []
+Density_list = []
+
 
 def iterative_loop():
     global r, p, OMEGA, omega, i, e, tau
@@ -49,9 +52,10 @@ def iterative_loop():
         # ==============================
 
         H = find_H(Ra=r, theta=theta, i=i, big_omega=OMEGA, omega=omega, p=p, e=e, tau=tau)  # высота
-
-
         density = find_density(H=H)  # плотность
+
+        H_list.append(H)
+        Density_list.append(density)
 
         # Скорости
         # ================================
@@ -136,6 +140,12 @@ def main():
     chart(x=theta_list, y=S_list[:len(theta_list)], title='S(θ)', xlabel='θ, рад', ylabel='S, км/ч^2')
     chart(x=theta_list, y=T_list[:len(theta_list)], title='T(θ)', xlabel='θ, рад', ylabel='T, км/ч^2')
     chart(x=theta_list, y=W_list[:len(theta_list)], title='W(θ)', xlabel='θ, рад', ylabel='W, км/ч^2')
+
+    if H_list:
+        chart(x=theta_list, y=H_list[:len(theta_list)], title='H(θ)', xlabel='θ, рад', ylabel='H, км')
+
+    if Density_list:
+        chart(x=theta_list, y=Density_list[:len(theta_list)], title='ρ(θ)', xlabel='θ, рад', ylabel='ρ, кг/м^3')
 
 
 if __name__ == '__main__':
