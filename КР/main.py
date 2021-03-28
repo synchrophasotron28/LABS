@@ -3,6 +3,8 @@ from functions import *
 import numpy as np
 import matplotlib.pyplot as plt
 
+sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
+
 revolutions = 8  # Количество оборотов
 theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
 r_list = []
@@ -40,23 +42,43 @@ def iterative_loop():
     r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
 
     for theta in theta_list:
+        # Радиус
+        # ==============================
+        r = get_r(p=p, e=e, theta=theta)
+        r_list.append(r)
+        # ==============================
+
+        H = find_H(Ra=r, theta=theta, i=i, big_omega=OMEGA, omega=omega, p=p, e=e, tau=tau)  # высота
+
+
+        density = find_density(H=H)  # плотность
+
+        # Скорости
+        # ================================
+        Vr = get_Vr(p=p, theta=theta, e=e)
+        Vt = get_Vt(p=p, theta=theta, e=e)
+        V = math.hypot(Vr, Vt)
+        # ================================
+
         # Компоненты возмущающих ускорений
         # ===============================
         T = T1(r=r, i=i, u=theta + omega)
         S = S1(r=r, i=i, u=theta + omega)
         W = W1(r=r, i=i, u=theta + omega)
         # T = S = W = 0
+
+        S = S2(sigma_x=sigma_x, density=density, V=V, Vr=Vr)
+        T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt)
+        W = 0
+        # S2 = lambda sigma_x, density, V, Vr: -sigma_x * density * V * Vr
+        # T2 = lambda sigma_x, density, V, Vt: -sigma_x * density * V * Vt
+        # W2 = 0
+
         S_list.append(S)
         T_list.append(T)
         W_list.append(W)
 
         # ===============================
-
-        # Радиус
-        # ==============================
-        r = get_r(p=p, e=e, theta=theta)
-        r_list.append(r)
-        # ==============================
 
         F = geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p)
 
