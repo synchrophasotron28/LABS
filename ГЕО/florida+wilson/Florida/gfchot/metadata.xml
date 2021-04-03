@@ -1,0 +1,507 @@
+<metadata><idinfo><citation><citeinfo><origin>FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC)</origin><pubdate>19890000</pubdate><title>gfchot</title><geoform>Grid data representing biological diversity.</geoform><onlink>http://www.state.fl.us</onlink></citeinfo></citation><descript><abstract>This is a "hot spot" data set representing biological diversity, created by aggregation of predictive habitat maps for wading birds, important natural communities, and 44 focal species. It also includes known species and community locations.</abstract><purpose>This data is intended to aid conservation and planning efforts in the state of Florida.</purpose></descript><timeperd><timeinfo><rngdates><begdate>19850000</begdate><enddate>19890000</enddate></rngdates></timeinfo><current>Variable.</current></timeperd><status><progress>Complete</progress><update>Irregular</update></status><spdom><bounding><westbc>-87.429037</westbc><eastbc>-79.875853</eastbc><northbc>30.981832</northbc><southbc>24.492739</southbc></bounding></spdom><keywords><theme><themekt>NONE</themekt><themekey>FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC)</themekey><themekey>Landsat Thematic Mapper Satellite Imagery</themekey><themekey>Conservation</themekey><themekey>Habitat</themekey><themekey>planning</themekey><themekey>Birds</themekey><themekey>Biological Diversity</themekey></theme><place><placekt>NONE</placekt><placekey>Florida</placekey><placekey>Southeast United States</placekey><placekey>Southeast U.S.</placekey></place><temporal><tempkt>NONE</tempkt><tempkey>1980s</tempkey></temporal></keywords><accconst>NONE</accconst><useconst>
+THE DATA INCLUDED IN THIS APPLICATION ARE BASED ON INTERPRETATION OF AVAILABLE INFORMATION AND SHOULD NOT BE CONSTRUED AS LEGALLY BINDING.
+
+Scale is an important factor in data usage. Certain scale data sets are not suitable for some projects, analysis, or modeling purposes. Please be sure you are using the best available data.
+
+1:24000 scale data sets are recommended for projects that are at the county level. 1:24000 data should NOT be used for high accuracy base mapping such as property parcel boundaries.
+
+1:100000 scale data sets are recommended for projects that are at the multi-county or regional level.  1:250000 scale data sets are recommended for projects that are at the regional or state level or larger.
+</useconst><native>Data was downloaded from: http://www.state.fl.us/fwc/pubs/gis/datalyrs.html</native><crossref><citeinfo><origin>FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC)</origin><pubdate>19890000</pubdate><title>WADERHOT</title><geoform>Map</geoform></citeinfo></crossref></idinfo><dataqual><attracc><attraccr>Data was created from Landsat Thematic Mapper Satellite Imagery dated 1985-1989 (30m pixels) in order to classify 22 land cover types (i.e., wildlife habitats) known in the state of Florida.  The FFWCC worked with a team of ecologists to reconstruct Floridian habitat types.</attraccr></attracc><logic>Not Applicable</logic><complete>In 1994, the FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC) published Closing the Gaps in Florida's Wildlife Habitat Conservation System, which implemented the use of Land Sat images to reconstruct Florida's habitat types.  This data layer was reviewed and used in a number of planning initiatives.</complete><lineage><srcinfo><srccite><citeinfo><origin>FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC)</origin><pubdate>19890000</pubdate><title>Unavailable</title><geoform>Model</geoform></citeinfo></srccite><srcscale>100000</srcscale><typesrc>Map</typesrc><srctime><timeinfo><rngdates><begdate>1985</begdate><enddate>1989</enddate></rngdates></timeinfo><srccurr>ground condition</srccurr></srctime><srccitea>FFWCC</srccitea><srccontr>Represent areas with a high degree of overlap for 54 declining species of wildlife plus known occurrences of flora, fauna, &amp; natural communities.</srccontr></srcinfo><procstep><procdesc>
+The process step describes, in general, the process used in the production of data sets.  The originating agencies created the original coverage.  GeoPlan, during the QA/QC process included the following aspects:
+(1) Adding the DESCRIPT item, based on Value Item Description
+(2) Reprojecting the coverage to FGDL Albers
+(3) Checking precision, tolerances and other factors which affect spatial data.
+In addition, this data layer contains information from the following report:
+Cox, J., Kautz, R., Maclaughlin, M., and T. Gilbert. 1994. Closing the Gaps
+in Florida's Wildlife Habitat Conservation System. Office of Environmental
+Services, Florida Game and Freshwater Fish Commission.
+
+American Crocodile
+American Oystercatcher
+American Swallow-tailed Kite
+Atlantic and Gulf Salt Marsh Snakes
+Audubon's Crested Caracara
+Beach Mice
+Black-whiskered Vireo
+Bobcat
+Bog Frog
+Cuban Snowy Plover
+Florida Black Bear
+Florida Burrowing Owl
+Florida Grasshopper Sparrow
+Florida Panther
+Florida Sandhill Crane
+Florida Scrub Jay
+Florida Scrub Lizard
+Fox Squirrels
+Gopher Tortoise
+Limpkin
+Mangrove Cuckoo
+Mottled Duck
+Pine Barrens Treefrog
+Piping Plover
+Red-cockaded Woodpecker
+Seaside Sparrows
+Short-tailed Hawk
+Snail Kite
+Southeastern American Kestrel
+Southern Bald Eagle
+White-crowned Pigeon
+Wild Turkey
+Wilson's Plover
+Areas supporting globally rare plant species
+Bat maternity and winter roosting caves
+Coastal communities
+Gap Analysis
+Pine rocklands
+Prairie birds
+Sandhill communities
+Scrub communities
+Scrub communities
+Tropical Hardwood Hammock Communities
+Wetlands important to Wading Birds
+</procdesc><procdate>20000000</procdate></procstep><procstep><procdesc Sync="TRUE">Dataset moved.</procdesc><srcused Sync="TRUE">Q:\finaldata\state\gfchot</srcused><date Sync="TRUE">20041014</date><time Sync="TRUE">12512000</time></procstep><procstep><procdesc Sync="TRUE">Dataset moved.</procdesc><srcused Sync="TRUE">C:\Data\FL_042004\State\gfchot</srcused><date Sync="TRUE">20070711</date><time Sync="TRUE">11082900</time></procstep></lineage></dataqual><spdoinfo><direct>Raster</direct><rastinfo><rasttype>Grid Cell</rasttype><rowcount>7248</rowcount><colcount>7413</colcount><vrtcount>1</vrtcount></rastinfo></spdoinfo><spref><horizsys><planar><planci><plance>row and column</plance><coordrep><absres>100.000000</absres><ordres>100.000000</ordres></coordrep><plandu>meters</plandu></planci></planar><geodetic><horizdn>D_North_American_1983_HARN</horizdn><ellips>Geodetic Reference System 80</ellips><semiaxis>6378137.000000</semiaxis><denflat>298.257222</denflat></geodetic></horizsys></spref><eainfo><detailed Name="gfchot.vat"><enttyp><enttypl>GFCHOT.VAT</enttypl><enttypd>Value Attribute Table</enttypd><enttypds>FFWCC</enttypds><enttypt Sync="TRUE">Table</enttypt><enttypc Sync="TRUE">6</enttypc></enttyp><attr><attrlabl Sync="TRUE">Rowid</attrlabl><attalias Sync="TRUE">Rowid</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl>Value</attrlabl><attrdef>Type of forest, where:</attrdef><attrdefs>FFWCC</attrdefs><attrdomv><edom><edomv>0</edomv><edomvd>Open water</edomvd><edomvds>Same</edomvds></edom><edom><edomv>1</edomv><edomvd>Background</edomvd><edomvds>Same</edomvds></edom><edom><edomv>2</edomv><edomvd>3-4 focal species</edomvd><edomvds>Same</edomvds></edom><edom><edomv>3</edomv><edomvd>5-6 focal species</edomvd><edomvds>Same</edomvds></edom><edom><edomv>4</edomv><edomvd>7 or more focal species</edomvd><edomvds>Same</edomvds></edom><edom><edomv>5</edomv><edomvd>Species occurrence record Note:  Species occurrence cells represent buffered points which have the area of approximately 100 acres.</edomvd><edomvds>Same</edomvds></edom></attrdomv><attalias Sync="TRUE">VALUE</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl>COUNT</attrlabl><attrdef>Number of cells corresponding to value</attrdef><attrdefs>FFWCC</attrdefs><attalias Sync="TRUE">COUNT</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl>DESCRIPT</attrlabl><attrdef>Based on Value</attrdef><attrdefs>FGDL</attrdefs><attalias Sync="TRUE">DESCRIPT</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed></eainfo><distinfo><distrib><cntinfo><cntperp><cntper>Operator</cntper><cntorg>FLORIDA GEOGRAPHIC DATA LIBRARY</cntorg></cntperp><cntaddr><addrtype>Physical</addrtype><address>
+431 Architecture Building
+PO Box 115706
+</address><city>Gainesville</city><state>Florida</state><postal>32611-5706</postal></cntaddr><cntvoice>(352) 3920997, Operator</cntvoice><cntemail>http://www.fgdl.org/fgdldocs/document/techsupp.htm</cntemail><hours>24 Hours / Day</hours><cntinst>
+Please visit the web site, http://www.fgdl.org, for all
+questions or concerns.
+</cntinst></cntinfo></distrib><distliab>Florida Geographic Data Library is a product of the University of Florida GeoPlan Center with support from the Florida Department of Transportation and the Florida Department of Environmental Protection. THE FGDL DATA AS PROVIDED BY CONTRIBUTING ORGANIZATIONS AND ANY PROGRAMMING SOFTWARE CREATED BY THE UNIVERSITY OF FLORIDA GEOPLAN CENTER (COLLECTIVELY THE "MATERIALS") ARE COPYRIGHTED BY THE UNIVERSITY OF FLORIDA GEOPLAN CENTER FOR THE FGDL CONTRIBUTING AGENCIES AND ORGANIZATIONS (THE "DATA PROVIDERS"). DO NOT REPRODUCE, REDISTRIBUTE OR RESELL THE MATERIALS, OR PROVIDE THE MATERIALS FOR FREE TO CUSTOMERS OR CLIENTS, OR PLACE THE MATERIALS FOR DOWNLOAD ON A WEBSITE. ADDITIONALLY, WHEN USING FGDL DATA OR SOFTWARE IN PROJECTS, MAPS, ETC.; YOU AGREE TO ACKNOWLEDGE THE FGDL AS A DATA SOURCE. THE MATERIALS ARE PROVIDED "AS IS". THE UNIVERSITY OF FLORIDA GEOPLAN CENTER MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE QUALITY OR SUITABILITY OF THE MATERIALS, EITHER EXPRESSLY OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE UNIVERSITY OF FLORIDA GEOPLAN CENTER MAKES NO WARRANTIES, GUARANTIES OR REPRESENTATIONS AS TO THE TRUTH, ACCURACY OR COMPLETENESS OF THE DATA PROVIDED BY THE FGDL CONTRIBUTING ORGANIZATIONS. THE UNIVERSITY OF FLORIDA GEOPLAN CENTER SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED AS A RESULT OF USING, MODIFYING, CONTRIBUTING OR DISTRIBUTING THE MATERIALS.</distliab></distinfo><metainfo><metd>1992</metd><metc><cntinfo><cntperp><cntper>Operator</cntper></cntperp><cntaddr><addrtype>Physical</addrtype><address>F620 S. Meridian St</address><city>Tallahassee</city><state>FL</state><postal>32399-1600</postal></cntaddr><cntvoice>(850)488-4676</cntvoice></cntinfo></metc><metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn><metstdv>FGDC-STD-001-1998</metstdv></metainfo><Esri><ModDate>20141111</ModDate><ModTime>13571300</ModTime><DataProperties><itemProps><itemName Sync="TRUE">gfchot</itemName><itemLocation><linkage Sync="TRUE">file://\\Rushmore\EdContent\Courses\IL\ARC1\Data_Working\Student\ARC1\Florida\gfchot</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><imsContentType Sync="TRUE" export="False">002</imsContentType><nativeExtBox><westBL Sync="TRUE">52650.390053</westBL><eastBL Sync="TRUE">793950.390053</eastBL><southBL Sync="TRUE">56824.824415</southBL><northBL Sync="TRUE">781624.824415</northBL><exTypeCode Sync="TRUE">1</exTypeCode></nativeExtBox></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn><csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits><projcsn Sync="TRUE">NAD_1983_HARN_Albers</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Albers&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Albers&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,400000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-84.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,24.0],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,31.5],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,24.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-19550100&lt;/XOrigin&gt;&lt;YOrigin&gt;-7526400&lt;/YOrigin&gt;&lt;XYScale&gt;225743210.67916927&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef><RasterProperties><General><PixelDepth Sync="TRUE">8</PixelDepth><HasColormap Sync="TRUE">FALSE</HasColormap><CompressionType Sync="TRUE">RLE</CompressionType><NumBands Sync="TRUE">1</NumBands><Format Sync="TRUE">GRID</Format><HasPyramids Sync="TRUE">TRUE</HasPyramids><SourceType Sync="TRUE">continuous</SourceType><PixelType Sync="TRUE">unsigned integer</PixelType><NoDataValue Sync="TRUE">255</NoDataValue></General></RasterProperties><copyHistory><copy source="U:\Courses\IL\ARC1_10_1\Data_Working\Student\ARC1\GISData\Florida\Raster\gfchot" dest="withheld" date="20120117" time="10081300"/></copyHistory></DataProperties><SyncDate>20141111</SyncDate><SyncTime>13571300</SyncTime><CreaDate>20120117</CreaDate><CreaTime>10081300</CreaTime><ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle><SyncOnce>FALSE</SyncOnce><scaleRange><minScale>5000000</minScale><maxScale>50000</maxScale></scaleRange><ArcGISFormat>1.0</ArcGISFormat><ArcGISProfile>FGDC</ArcGISProfile></Esri><mdDateSt Sync="TRUE">20141111</mdDateSt><distInfo><distributor><distorTran><onLineSrc><linkage Sync="FALSE">withheld</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc></distorTran><distorCont><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role></distorCont><distorFormat><formatName>Raster Dataset</formatName><formatVer>Raster Dataset</formatVer></distorFormat><distorCont><rpIndName>Environmental Systems Research Institute, Inc. (Esri)</rpIndName><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>CA</adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+</cntInstr></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont><distorCont><rpIndName>Environmental Systems Research Institute, Inc. (Esri)</rpIndName><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>CA</adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+</cntInstr></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont><distorCont><rpIndName>Environmental Systems Research Institute, Inc. (Esri)</rpIndName><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>CA</adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+</cntInstr></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont></distributor><distFormat><formatName Sync="TRUE">Raster Dataset</formatName><formatVer>Raster Dataset</formatVer></distFormat></distInfo><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.0.3348</envirDesc><dataLang><languageCode value="eng" Sync="TRUE"/><countryCode value="USA" Sync="TRUE"/></dataLang><idCitation><resTitle Sync="TRUE">gfchot</resTitle><presForm><PresFormCd value="005" Sync="TRUE"/></presForm><date><reviseDate>2012-04-30T00:00:00</reviseDate></date></idCitation><spatRpType><SpatRepTypCd value="002" Sync="TRUE"/></spatRpType><dataExt><geoEle xmlns=""><GeoBndBox esriExtentType="search"><exTypeCode Sync="TRUE">1</exTypeCode><westBL Sync="TRUE">-87.639416</westBL><eastBL Sync="TRUE">-79.872659</eastBL><northBL Sync="TRUE">31.043020</northBL><southBL Sync="TRUE">24.456852</southBL></GeoBndBox></geoEle></dataExt><idPurp>This data is intended to aid conservation and planning efforts in the state of Florida.</idPurp><idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This is a "hot spot" data set representing biological diversity, created by aggregation of predictive habitat maps for wading birds, important natural communities, and 44 focal species. It also includes known species and community locations.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><searchKeys><keyword>Esri Training Services</keyword><keyword>ARC1</keyword><keyword>FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC)</keyword><keyword>Landsat Thematic Mapper Satellite Imagery</keyword><keyword>Conservation</keyword><keyword>Habitat</keyword><keyword>planning</keyword><keyword>Birds</keyword><keyword>Biological Diversity</keyword></searchKeys><resConst><Consts><useLimit>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;THE DATA INCLUDED IN THIS APPLICATION ARE BASED ON INTERPRETATION OF AVAILABLE INFORMATION AND SHOULD NOT BE CONSTRUED AS LEGALLY BINDING. Scale is an important factor in data usage. Certain scale data sets are not suitable for some projects, analysis, or modeling purposes. Please be sure you are using the best available data. 1:24000 scale data sets are recommended for projects that are at the county level. 1:24000 data should NOT be used for high accuracy base mapping such as property parcel boundaries. 1:100000 scale data sets are recommended for projects that are at the multi-county or regional level. 1:250000 scale data sets are recommended for projects that are at the regional or state level or larger. &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Use of this Data is restricted to training, demonstration, and educational purposes only. This Data cannot be sold or used for marketing without the express written consent of Environmental Systems Research Institute Inc.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;THE DATA AND RELATED MATERIALS MAY CONTAIN SOME NONCONFORMITIES, DEFECTS, OR ERRORS. ESRI DOES NOT WARRANT THAT THE DATA WILL MEET USER'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL BE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR WILL BE CORRECTED. ESRI IS NOT INVITING RELIANCE ON THIS DATA, AND THE USER SHOULD ALWAYS VERIFY ACTUAL DATA.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;THE DATA AND RELATED MATERIALS ARE PROVIDED "AS-IS," WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;IN NO EVENT SHALL ESRI AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS EXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY BUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON ANY THEORY OF LIABILITY, AND WHETHER OR NOT ESRI OR ITS LICENSOR(S) HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;In the event that the data vendor(s) has (have) granted the end user permission to redistribute the Geodata, please use proper proprietary or copyright attribution for the various data vendor(s), and provide the associated metadata file(s) with the Geodata.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</useLimit></Consts></resConst><idPoC><rpOrgName>FLORIDA GEOGRAPHIC DATA LIBRARY</rpOrgName><role><RoleCd value="007"/></role><rpCntInfo><cntAddress addressType="physical"><delPoint>431 Architecture Building</delPoint><city>Gainesville</city><adminArea>Florida </adminArea><postCode>32611-5706</postCode><country>UNITED STATES</country></cntAddress><cntInstr>Please visit the web site, http://www.fgdl.org, for all
+questions or concerns.</cntInstr><cntOnlineRes><linkage>http://www.fgdl.org/fgdldocs/document/techsupp.htm</linkage></cntOnlineRes></rpCntInfo></idPoC><idCredit>FLORIDA FISH &amp; WILDLIFE CONSERVATION COMMISSION (FFWCC)</idCredit><tpCat><TopicCatCd value="002"/></tpCat><tpCat><TopicCatCd value="007"/></tpCat></dataIdInfo><mdLang><languageCode value="eng" Sync="TRUE"/><countryCode value="USA" Sync="TRUE"/></mdLang><mdChar><CharSetCd value="006" Sync="TRUE"/></mdChar><mdHrLv><ScopeCd value="005" Sync="TRUE"/></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><refSysInfo><RefSystem><refSysID><identCode code="0" Sync="TRUE" value="0"/></refSysID></RefSystem></refSysInfo><spatRepInfo><Georect><cellGeo><CellGeoCd Sync="TRUE" value="002"/></cellGeo><numDims Sync="TRUE">2</numDims><tranParaAv Sync="TRUE">1</tranParaAv><chkPtAv Sync="TRUE">0</chkPtAv><cornerPts><pos Sync="TRUE">52650.390053 56824.824415</pos></cornerPts><cornerPts><pos Sync="TRUE">52650.390053 781624.824415</pos></cornerPts><cornerPts><pos Sync="TRUE">793950.390053 781624.824415</pos></cornerPts><cornerPts><pos Sync="TRUE">793950.390053 56824.824415</pos></cornerPts><centerPt><pos Sync="TRUE">423300.390053 419224.824415</pos></centerPt><axisDimension type="002"><dimSize Sync="TRUE">7413</dimSize><dimResol><value Sync="TRUE" uom="Meter">100.000000</value></dimResol></axisDimension><axisDimension type="001"><dimSize Sync="TRUE">7248</dimSize><dimResol><value Sync="TRUE" uom="Meter">100.000000</value></dimResol></axisDimension><ptInPixel><PixOrientCd Sync="TRUE" value="001"/></ptInPixel></Georect></spatRepInfo><contInfo><ImgDesc><contentTyp><ContentTypCd Sync="TRUE" value="003"/></contentTyp><covDim><Band><dimDescrp Sync="TRUE">gfchot</dimDescrp><maxVal Sync="TRUE">5.000000</maxVal><minVal Sync="TRUE">0.000000</minVal><bitsPerVal Sync="TRUE">8</bitsPerVal><valUnit><UOM type="length" gmlID=""><unitSymbol Sync="TRUE">Meter</unitSymbol></UOM></valUnit></Band></covDim><attDesc>m Landsat Thematic Mapper Satellite Imagery dated 1985-1989</attDesc><trianInd>False</trianInd><radCalDatAv>False</radCalDatAv><camCalInAv>False</camCalInAv><filmDistInAv>False</filmDistInAv><lensDistInAv>False</lensDistInAv></ImgDesc></contInfo><Binary><Thumbnail><Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAESARkDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9N/E/
+iLT/AAl4d1PW9VuPsumabbSXl1PsZ/LhjQu7bVBY4VWOACa8vuP2u/hVa3VnZ3PiW4tb69uY7SG2
+uNGvo5HmfGE2NDuBwyHnoJYyeHTd0Hx+0bxT4h+D/iTTvB0Njd+IZ4FWG01JUa3u496+dbvv4xLF
+5kfOPv8A3k++PziaxuPFnhvWxctpet+IdVsIri9na3a9fc9vLHZzJbw2+/zHTc6N8nkRshZGdpWl
+tqNKlGtPWLlyuzvJNtJPlt8Or1vdu0UrsqbhToe1k+qXlr/X6H6PQfH/AOHUultqEvi/S9Ns1eKP
+zdWnFiN8kQmRcT7DnY33exV1OGRwvQW3xD8LXtoLy28R6Tc2pQSieK9jZChAYNuDYxgqc+hr8rl0
+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
+DUcY/Z03duKk9dLKykl9lWau3dN7NNH5/Vyermf1fLcVJRcHJ/EozlF3ekmmpXcWlGytu9GeX+HW
+nXxBrmkT6rrNvZaHart/t6WCYW00jzq+fm3tDsiR41ciRlQFWVH3NzeieLf+EZtLDWtatpdUsLRX
+uND1A3MLXitsZEcrIiBzKjqTFvMhCRHYTE5p/wAKbZ/DHxRXw3fyWFrBrQS+js47W3WZES3dE814
+/Kj37lX90qTc+b93c7vufFGxuNB0fXUm1S48OwyFZv7Ts97taIzxIEKpIX+fcV4wMMc/ey/2+IqY
+XLOJaWEUVOniI0nGUbp2ceSbXKruTldu1+bbXmRxZxRm1SxVKnzU6j5JNX5rKKurpX2bta97NIZp
+Wr63H480q2sIYLG2eKV7TWP7MSNbZJJo2aG4QqA2ILeGFfmgIRfl3MqJW/qOqXPh74e6h4pgtAsS
+295NdwahYyJc6krzyInnKfNKJ5ahlLrg4iG5I9yVneFIhbeFNDt0lE0VvYwxJIoT51CD5vkYg/gT
+/vEV6dJLa6x4cWHWLMeIp/KN3daXDH9rWQq+1QN+EHzqwGWCHbLtXCtj52ObQx2aLCSpObjNRbVo
+80FJ83Nppo3Zq1m7ux5WT5i80qThiWlSwqve9m3pH3VdWeiemqSdtWcC3xFlPw9stW1e7t9G1YW1
+tqjxRF/KvPtbF4fKZ5v4Y4rhNr/ceIOuyKIbudbxhNoevaFqWsWNrpOn39n5gmsQ+mAXUbXE0SSK
+03lpv86ZCHYoXY78hePLNUsLTwfpd/b3tvrNra3Jl0oW2oWLxDyftpmX+zleZiwVkhd45VI+V1aZ
+WlTd6F8CbDxB460DxHoepy69Y3dotzbx6lLIyQxzu7OyP92QTiZy7MD86OUk+XYtfecVZFgcpUsX
+gfdw8naVtOZK2kba3Ts7a3elz9VqZbipSp4unWlJzd7bXV203Ju6S5m2tW9FZEEt8PBXxI1xLi3e
+10S5ghaDdAltDpqiZ8Q/dRPL/ePtdsZZGQb3VhX3j+yN4j1TVfg7pmi61bQWt/4dRNKhMDnNzaRK
+Et7koc7N6L6sCUJ+X7ifNF14dtPGFoh8ZRWlpG8Krb2qFX8ld32hrcLJCMny4QzjZkBc/eUFfTvh
+H4ib4ZfETTY1ke40nWLWDR5ICySujxSMIXWUrvcIZJUfe7MfMz1Rt3x+A4nhVxlN4hclWpaNTTRu
+muWMlZJK7bTVtWm33fzuXYWOV1KmMqSajPlTbWsmm4KTttr12d1d3Pr0UUituUH15pa/Vz7tBRRR
+QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFB6UUUAeQ/tEfDTxR8VPC
+GkaP4V1XTtCu01SOa7v9QtFuDDa+VLHKYQyN++/eDGCmRuXeAxz5Z+0x8AF8FfCHxd4k+HWoavoe
+oafpeV0m1u4zaeSkzyTyr5ymSNkjmmK+VImNiBR8qivq8oCuMcUEA44GTWHsaMqinUpqVrbpO9td
+fImMVGXtEte/Xr/m/vPxV8O+LvENrq+k3kWn3GrrDJBpOm/bj9iVYYIt0KN+9YAyRzO21s7t2FZ4
+mkjf3/wjd3GveE4rrXoptI1TU3AlOroIbkywSTOEzGkX3lVyB5S5DSL83JfA+z6npnifUtKtrDUL
+3TvCXie58PWWtMDctFbQLKib4Y2Xy5FCQp56oECyuSNzPv7fVV0+9ttSstQt5pLC1uppb5dR8qWI
+fOkz+cu1lAUGJxuyANnyAYC/nPH2erNJUsPLBqlVg03UhdyspNW3StrGVkr33a0Phs8pywnNCrFq
+Lty2vrzKUdubTS66Xtq9UYcun2GiPaJawCQM0kVuUDSvsLgyM8hXjJwTvwXPKqTuq9qnjKx8O+F7
+KLU3t7eK2uUhsbu5SRzFM5bnercPs83a7Y43Zbqrrdp/Y0N7f3N8ttYPffZLW5neKKGFPKLsHlDA
+Dc7yoGdiCiwjO9m34/iVrKzvxqd0bWabT1aTzY1UlI5ARuTkLGpIHzkYUI4bHzEfm0IYjB4yNpOa
+kvi1fM2lLS67tXvqm3c/GFRnhq8ZVE7SunyvSTd9LvSylo1Zpau+p5z44k1DUfEOraNOZtOvYhFd
+3D6hd3MNzbiaZYpmilhe4jeBInl3b2wjXNyyIvzRr9MaTpa6hpMOqSR6jb6yLWKD7Nq90ltcStH5
+iQ/aHg3cOzue4y+QmQFHzzD480nW7vRZY7Y2AubSeHVJL2yUsiHbIqyzTOiPBvuFcIr7mCxIFTeB
+Xf2mnW8UTw6lrOhwJZJeWWnnU7OJoYYykuYczEuEVRLvTgbIkQeSAwf9azHNoZhQo5bmNP2VldJq
+Tcr2uk09FKyau2rO99D9crZpiqUsPH2fs+is5SatFpxtdxd0tErJ9PPrPDeg+X4p8QyXFzqupXDT
+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
+nJY2jOirXW7+5e83pfpsnqZVvrj31xYW1zP9lsIU+yxrIGuIbRHG2aVYn3ctuaX5MYdsrt+Xb9K/
+shfASX9o74gxeJtdMqeCvCZtbdLS6D3IvTH80drmTdHswqvMq8YlVVRRLlPr39mb9kPQfgPZ2Op3
+cg1nxeIALi7I/cW8rF95gUjdnY/l7zztDbRH5sit9EbgOK4k3dv+vX5nqRhCm9I2tovvbv5t33d3
+2Y4cUUUUywooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCjq
+WoWukafdX1/cxWdhbRPNPcXEgSOGNBuZ3Y8KoAJLGuQ1D45fDjSr+6sb74g+F7G8tpHguLa51q2j
+lhkQ4ZHUvlSCCCDVj4x6Df8Air4ReNtF0qE3Wpalol7ZWsG5U8yaSB0RdzEKMsw5JxX5dH9g346A
+/wDIjf8AlWsP/j1NIuKTPuf48/tueCfhLoOn3Xh6+0fx/qV5c+UdP0nWE/cxBGZpXkjSUL82xQrY
+LbyV+41fIX7QX7a3i74sHRo9Ei1r4aXOmm5SaDTNdk33jv5OBIqLCybAr7SwbJcqv8VZHhn9gH40
+6jrtnBfeF7LS7Rn3SXWo6rAYAAM7X8h3k+bG35FP3v4fvL7Z4T/4Jk3kmn2X/CSeMbCyld1W/tdH
+0xrhnjDpxFczPlHKx53+SNrSuuGT5TnPmTSj/X9eg0oqSvt5f1p62Z80aB8aPijpniC1ubj4p+JH
+SzUagAus3FylxFG43qiOzxzMGDjBBjOx8tsXdXcfC3xn8d/jJ8a5fFWmwX/ivxHoNpeeTDJcQ29p
+o8txbPaoypJ+5jZWw/l43SeS27d8zL9y+Ff2MPhF4Ture9j8LDWNQSPZPd6xdzXf2tiPmeaF38ly
+zfP9zAfBULtXHrvh7w7pnhTS4tL0bTrTSdNg3eTZ2ECQwxZYsdqIAoyST9WNKz9pz36bf1b5/oZw
+bU3N9krfn9/y8rHxh4I/YY8VfFPWbLxf8b/E93qGovceZcaHMfNmWEF3+zrPHMY4Y2ld22RIcJjY
+0TMQn118O/hl4Y+E3hmPw/4S0eHRtKSV5jDEzuzyOfmd3cs7t0GWJ4UL0UCutFFUtBt3CiiiqEFF
+FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUU
+UdQQYooopdQ6hRRRTAKKKKACiiigD//Z</Data></Thumbnail></Binary><mdContact><rpOrgName>FLORIDA GEOGRAPHIC DATA LIBRARY</rpOrgName><role><RoleCd value="007"/></role><rpCntInfo><cntAddress addressType="physical"><delPoint>431 Architecture Building</delPoint><city>Gainesville</city><adminArea>Florida </adminArea><postCode>32611-5706</postCode><country>UNITED STATES</country></cntAddress><cntInstr>Please visit the web site, http://www.fgdl.org, for all
+questions or concerns.</cntInstr><cntOnlineRes><linkage>http://www.fgdl.org/fgdldocs/document/techsupp.htm</linkage></cntOnlineRes></rpCntInfo><editorSave>False</editorSave><displayName>FLORIDA GEOGRAPHIC DATA LIBRARY</displayName></mdContact><mdContact><rpIndName>Environmental Systems Research Institute, Inc. (Esri)</rpIndName><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>CA</adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+</cntInstr></rpCntInfo></mdContact><dqInfo><dataLineage><statement>From Landsat Thematic Mapper Satellite Imagery dated 1985-1989</statement><dataSource type=""><srcDesc>From Landsat Thematic Mapper Satellite Imagery dated 1985-1989</srcDesc><srcMedName><MedNameCd value="016"/></srcMedName></dataSource></dataLineage></dqInfo></metadata>

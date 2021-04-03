@@ -1,0 +1,6 @@
+20000314 708 197 11740     0wesleyh project grid /auto/mos4/grids27/GFCHOT gfchot /auto/library/supplies/proj_files/fgdl27_fgdl90.prj nearest 100
+20000710 948   0     0     0external /RAID/D0S4/GRIDS90/GFCHOT
+200007101454   0     0     0external /AUTO/FGDL0/GRIDS90/GFCHOT
+200211211141   0     0    24goody  copy GFCHOT /auto/geo3/finaldata/v2002/state_cd1_new/GFCHOT
+200211251634   0     0    22goody  copy GFCHOT /AUTO/ATLAS1/V2003/STATE_CD1/GFCHOT
+200410081422   0     1   168goody    copy /atlas1/v2003/state/GFCHOT /rd1/qaqc/finaldata/state/GFCHOT

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20130819</CreaDate>
+    <CreaTime>15100900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncOnce>TRUE</SyncOnce>
+  </Esri>
+  <mdContact xmlns:esri="http://www.esri.com/metadata/">
+    <rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName>
+    <rpCntInfo>
+      <cntAddress>
+        <delPoint>380 New York Street</delPoint>
+        <city>Redlands</city>
+        <adminArea>California</adminArea>
+        <postCode>92373-8100</postCode>
+        <country>USA</country>
+        <eMailAdd>info@esri.com</eMailAdd>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>909-793-2853</voiceNum>
+        <faxNum>909-793-5953</faxNum>
+      </cntPhone>
+      <cntOnlineRes>
+        <linkage>http://www.esri.com/about-esri/contact.html</linkage>
+      </cntOnlineRes>
+      <cntInstr>In the United States, please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded. Outside the United States, please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.</cntInstr>
+      <cntHours>8:00 a.m.-5:00 p.m. Pacific time, Monday-Friday</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="005" />
+    </role>
+  </mdContact>
+</metadata>

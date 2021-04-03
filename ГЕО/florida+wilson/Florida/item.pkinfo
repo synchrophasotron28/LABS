@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><?xml-stylesheet type="text/xsl" href="http://www.arcgisonline.com/home/pkinfostylesheet.xsl"?>
+<pkinfo Culture="en-US">
+<ID>25DD0187-F8F7-4BB4-B801-D5C94F50340D</ID>
+<name>USA Block Group Boundaries</name>
+<size>212424178</size>
+<created>1288737347627</created>
+<type>Layer Package</type>
+<packagelocation>http://www.arcgisonline.com/sharing/content/items/1c924a53319a491ab43d5cb1d55d8561/data</packagelocation>
+<pkinfolocation>http://www.arcgisonline.com/sharing/content/items/1c924a53319a491ab43d5cb1d55d8561/item.pkinfo</pkinfolocation>
+<lpkinfo>
+<Layer Name="USA Block Group Boundaries" Workspace="{34DAE34F-DBE2-409C-8F85-DDBB46138011}">
+</Layer>
+</lpkinfo>
+</pkinfo>

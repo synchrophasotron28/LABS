@@ -1,0 +1,8 @@
+200003112117 315 14779     0wesleyh project grid /auto/mos4/grids27/demugsint demugsint /auto/library/supplies/proj_files/fgdl27_fgdl90.prj bilinear 90
+200003151645   0     0     0wesleyh rename demugsint demugs
+200003151645   0     0     0wesleyh rename demugs usgsdem
+20000710 948   0     0     0external /RAID/D0S4/GRIDS90/USGSDEM
+200007101454   0     0     0external /AUTO/FGDL0/GRIDS90/USGSDEM
+200211211141   0     0    34goody  copy USGSDEM /auto/geo3/finaldata/v2002/state_cd1_new/USGSDEM
+200211251634   0     1    16goody  copy USGSDEM /AUTO/ATLAS1/V2003/STATE_CD1/USGSDEM
+200410081422   0     1   141goody    copy /atlas1/v2003/state/USGSDEM /rd1/qaqc/finaldata/state/USGSDEM

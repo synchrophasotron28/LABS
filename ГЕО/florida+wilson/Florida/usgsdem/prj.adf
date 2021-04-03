@@ -1,0 +1,14 @@
+Projection    ALBERS                                                            
+Datum         HPGN                                                              
+Zunits        NO                                                                
+Units         METERS                                                            
+Spheroid      GRS1980                                                           
+Xshift        0.0000000000                                                      
+Yshift        0.0000000000                                                      
+Parameters                                                                      
+ 24  0  0.000 /* 1st standard parallel                                          
+ 31 30  0.000 /* 2nd standard parallel                                          
+-84  0  0.000 /* central meridian                                               
+ 24  0  0.000 /* latitude of projection's origin                                
+400000.00000 /* false easting (meters)                                  
+0.00000 /* false northing (meters)                                      

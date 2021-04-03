@@ -1,0 +1,345 @@
+<metadata><idinfo><citation><citeinfo><origin>UNITED STATES GEOLOGICAL SURVEY</origin><pubdate>19840000</pubdate><title>usgsdem</title><edition>20010000</edition><geoform>raster digital data</geoform><onlink>http://www.usgs.gov</onlink></citeinfo></citation><descript><abstract>This dataset contains a Digital Elevation Model (DEM). The USGSDEM is an ARC/INFO grid that consists of 92 meter cells whose values represent elevation relative to sea level. These floating point values enable us to display a continuous surface of elevation, as opposed to topography which is broken into intervals.</abstract><purpose>This dataset contains a Digital Elevation Model (DEM). The USGSDEM is an ARC/INFO grid that consists of 92 meter cells whose values represent elevation relative to sea level. These floating point values enable us to display a continuous surface of elevation, as opposed to topography which is broken into intervals.  The cell values for this grid represent elevation in meters. DEM's may be used to do the following types of analysis: hydrologic analysis including flow direction, flow accumulation, and watershed delineation; and determination of slope and aspect, and analytical hillshading.
+
+For more information, consider the following resources:
+
+Jenson, S.K. and J.O. Domingue. 1988. Extracting Topographic Structure from
+Digital Elevation Data for Geographic Information System Analysis.
+Photogrammetric Engineering and Remote Sensing. 54(11) 1593-1600.
+
+Philip, G.M. and D.F. Watson. 1982. A Precise Method for Determining
+Contoured Surfaces. Australian Petroleum Exploration Association Journal 22:
+205-212.
+
+A good source of information regarding this USGS Digital Elevation Model can be found Online at: http://rmmcweb.cr.usgs.gov/elevation/dpi_dem.html</purpose></descript><timeperd><timeinfo><rngdates><begdate>19720000</begdate><enddate>19840000</enddate></rngdates></timeinfo><current>ground condition</current></timeperd><status><progress>Complete</progress><update>Irregular</update></status><spdom><bounding><westbc>-87.429040</westbc><eastbc>-79.872251</eastbc><northbc>30.983191</northbc><southbc>24.492815</southbc></bounding></spdom><keywords><theme><themekt>NONE</themekt><themekey>UNITED STATES GEOLOGICAL SURVEY</themekey><themekey>Digital Elevation Model</themekey><themekey>DEM</themekey><themekey>USGS</themekey><themekey>DRG</themekey><themekey>model</themekey><themekey>Elevation</themekey><themekey>conservation</themekey><themekey>topography</themekey><themekey>Planning</themekey></theme><place><placekt>NONE</placekt><placekey>Florida</placekey><placekey>Southeast United States</placekey><placekey>Southeast U.S</placekey></place><temporal><tempkt>NONE</tempkt><tempkey>1980s</tempkey><tempkey>1990s</tempkey></temporal></keywords><accconst>NONE</accconst><useconst>
+THE DATA INCLUDED IN THIS APPLICATION ARE BASED ON INTERPRETATION OF AVAILABLE INFORMATION AND SHOULD NOT BE CONSTRUED AS LEGALLY BINDING.
+
+Scale is an important factor in data usage. Certain scale data sets are not suitable for some projects, analysis, or modeling purposes. Please be sure you are using the best available data.
+
+1:24000 scale data sets are recommended for projects that are at the county level. 1:24000 data should NOT be used for high accuracy base mapping such as property parcel boundaries.
+
+1:100000 scale data sets are recommended for projects that are at the multi-county or regional level.  1:250000 scale data sets are recommended for projects that are at the regional or state level or larger.
+
+DEM's may be used in the generation of three-dimensional graphics displaying terrain slope,
+apsect (direction of slope), and terrain profiles between selected points. At the USGS, DEM's have
+been used in combination with digital raster graphics (DRG's), digital line graphs (DLG's), and
+digital orthophoto quadrangles (DOQ's) to both enhance the visual information for data extraction
+and revision purposes and to create aesthetically pleasing and dramatic hybrid digital images.
+Non-graphic applications such as modeling terrain and gravity data for use in the search for
+energy resources, calculating the volume of proposed reservoirs, and determining landslide
+probability have also been developed
+</useconst><native>For more information, visit: http://rmmcweb.cr.usgs.gov/elevation/dpi_dem.html</native><crossref><citeinfo><origin>UNITED STATES GEOLOGICAL SURVEY</origin><pubdate>19840000</pubdate><title>Unavailable</title><geoform>Map</geoform></citeinfo></crossref></idinfo><dataqual><attracc><attraccr>
+A DEM file is organized into a series of three records, A, B, and C. The A record contains
+information defining the general characteristics of the DEM, including its name, boundaries, units
+of measurement, minimum and maximum elevations, number of B records, and projection
+parameters. Each B record consists of an elevation profile with associated header information, and
+the C record contains accuracy data. Each file contains a single A and C record, while there is a
+separate B record for each elevation profile. More detailed information about the organization of a
+DEM file can be found in the National Mapping Program Technical Instructions, Standards for
+Digital Elevation Models and Digital Elevations Models: Data User's Guide.
+</attraccr></attracc><logic>Certain node/geometry and topology (GT)-polygon/chain relationships are collected or generated to satisfy topological requirements. Some of these requirements include: chains must begin and end at nodes, chains must connect to each other at nodes, chains do not extend through nodes, left and right GT-polygons are defined for each chain element and are consistent throughout the transfer, and the chains representing the limits of the file (neatline) are free of gaps. The neatline is generated by connecting the four corners of the digital file, as established during initialization of the digital file.  All data outside the enclosed region are ignored and all data crossing these geographically straight lines are clipped at the neatline. (Exception: During the QA/QC process all data is examined and if errors are found and corrections are possible, then data is corrected accordingly.  This process is documented in the Process_Step.)  Data within a specified tolerance of the neatline are snapped to the neatline. Neatline straightening aligns the digitized edges of the digital data with the generated neatline, that is, with the longitude/latitude lines in geographic coordinates.  All internal polygons are tested for closure.  Certain attributes and/or entities, e.g. closure line, convey data quality information.  When information to be encoded in the subfield is known to be not applicable (undefined, not relevant), then the subfield is valued by a string of "9s"; and when the information to be encoded is relevant but unknown (or missing), then the subfield is valued by a string of "9s."</logic><complete>Certain node/geometry and topology (GT)-polygon/chain relationships are collected or generated to satisfy topological requirements. Some of these requirements include: chains must begin and end at nodes, chains must connect to each other at nodes, chains do not extend through nodes, left and right GT-polygons are defined for each chain element and are consistent throughout the transfer, and the chains representing the limits of the file (neatline) are free of gaps. The neatline is generated by connecting the four corners of the digital file, as established during initialization of the digital file.  All data outside the enclosed region are ignored and all data crossing these geographically straight lines are clipped at the neatline. (Exception: During the QA/QC process all data is examined and if errors are found and corrections are possible, then data is corrected accordingly.  This process is documented in the Process_Step.)  Data within a specified tolerance of the neatline are snapped to the neatline. Neatline straightening aligns the digitized edges of the digital data with the generated neatline, that is, with the longitude/latitude lines in geographic coordinates.  All internal polygons are tested for closure.  Certain attributes and/or entities, e.g. closure line, convey data quality information.  When information to be encoded in the subfield is known to be not applicable (undefined, not relevant), then the subfield is valued by a string of "9s"; and when the information to be encoded is relevant but unknown (or missing), then the subfield is valued by a string of "9s."</complete><lineage><srcinfo><srccite><citeinfo><origin>UNITED STATES GEOLOGICAL SURVEY</origin><pubdate>19840000</pubdate><title>Unavailable</title><geoform>Map</geoform></citeinfo></srccite><srcscale>250000</srcscale><typesrc>Map</typesrc><srctime><timeinfo><rngdates><begdate>19720000</begdate><enddate>19840000</enddate></rngdates></timeinfo><srccurr>ground condition</srccurr></srctime><srccitea>USGS</srccitea><srccontr>
+Over the years, the USGS has collected digital elevation data using a number of production
+strategies including manual profiling from photogrammetric stereomodels; stereomodel digitizing
+of contours; digitizing topographic map contour plates; converting hypsographic and hydrographic
+tagged vector files; and performing autocorrelation via automated photogrammetric systems. Of
+these techniques, the derivation of DEM's from vector hypsographic and hydrographic data
+produces the most accurate model, and is the preferred method.
+</srccontr></srcinfo><procstep><procdesc>
+The process step describes, in general, the process used in the production of data sets.  The originating agencies created the original spatial coverage.  GeoPlan, during the QA/QC process included the following aspects:
+(1) Reprojected data to FGDL Albers
+(2) Set Precision to DOUBLE
+(3) Set Tolerances to FGDL Standards.
+</procdesc><procdate>20000000</procdate></procstep><procstep><procdesc Sync="TRUE">Dataset moved.</procdesc><srcused Sync="TRUE">Q:\finaldata\state\usgsdem</srcused><date Sync="TRUE">20041014</date><time Sync="TRUE">12535300</time></procstep><procstep><procdesc Sync="TRUE">Dataset moved.</procdesc><srcused Sync="TRUE">C:\Data\FL_042004\State\usgsdem</srcused><date Sync="TRUE">20070711</date><time Sync="TRUE">11083900</time></procstep></lineage></dataqual><spdoinfo><direct>Raster</direct><rastinfo><rasttype>Grid Cell</rasttype><rowcount>8053</rowcount><colcount>8237</colcount><vrtcount>1</vrtcount></rastinfo></spdoinfo><spref><horizsys><planar><planci><plance>Coordinate Pair</plance><coordrep><absres>90.0000</absres><ordres>90.0000</ordres></coordrep><plandu>METERS</plandu></planci></planar><geodetic><horizdn>D_North_American_1983_HARN</horizdn><ellips>GRS1980</ellips><semiaxis>6378137.000000</semiaxis><denflat>298.257222</denflat></geodetic></horizsys></spref><eainfo><detailed Name="usgsdem.vat"><enttyp><enttypl>USGSDEM.VAT</enttypl><enttypd>Value Attribute Table</enttypd><enttypds>USGS</enttypds><enttypt Sync="TRUE">Table</enttypt><enttypc Sync="TRUE">115</enttypc></enttyp><attr><attrlabl Sync="TRUE">Rowid</attrlabl><attalias Sync="TRUE">Rowid</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl>VALUE</attrlabl><attrdef>Floating point values that represent elevation relative to sea level.</attrdef><attrdefs>USGS</attrdefs><attalias Sync="TRUE">VALUE</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl>COUNT</attrlabl><attrdef>Number of cells corresponding to a value</attrdef><attrdefs>USGS</attrdefs><attalias Sync="TRUE">COUNT</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed></eainfo><distinfo><distrib><cntinfo><cntperp><cntper>Operator</cntper><cntorg>FLORIDA GEOGRAPHIC DATA LIBRARY</cntorg></cntperp><cntaddr><addrtype>Physical</addrtype><address>
+431 Architecture Building
+PO Box 115706
+</address><city>Gainesville</city><state>Florida</state><postal>32611-5706</postal></cntaddr><cntvoice>(352) 3920997, Operator</cntvoice><cntemail>http://www.fgdl.org/fgdldocs/document/techsupp.htm</cntemail><hours>24 Hours / Day</hours><cntinst>
+Please visit the web site, http://www.fgdl.org, for all
+questions or concerns.
+</cntinst></cntinfo></distrib><distliab>Florida Geographic Data Library is a product of the University of Florida GeoPlan Center with support from the Florida Department of Transportation and the Florida Department of Environmental Protection. THE FGDL DATA AS PROVIDED BY CONTRIBUTING ORGANIZATIONS AND ANY PROGRAMMING SOFTWARE CREATED BY THE UNIVERSITY OF FLORIDA GEOPLAN CENTER (COLLECTIVELY THE "MATERIALS") ARE COPYRIGHTED BY THE UNIVERSITY OF FLORIDA GEOPLAN CENTER FOR THE FGDL CONTRIBUTING AGENCIES AND ORGANIZATIONS (THE "DATA PROVIDERS"). DO NOT REPRODUCE, REDISTRIBUTE OR RESELL THE MATERIALS, OR PROVIDE THE MATERIALS FOR FREE TO CUSTOMERS OR CLIENTS, OR PLACE THE MATERIALS FOR DOWNLOAD ON A WEBSITE. ADDITIONALLY, WHEN USING FGDL DATA OR SOFTWARE IN PROJECTS, MAPS, ETC.; YOU AGREE TO ACKNOWLEDGE THE FGDL AS A DATA SOURCE. THE MATERIALS ARE PROVIDED "AS IS". THE UNIVERSITY OF FLORIDA GEOPLAN CENTER MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE QUALITY OR SUITABILITY OF THE MATERIALS, EITHER EXPRESSLY OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE UNIVERSITY OF FLORIDA GEOPLAN CENTER MAKES NO WARRANTIES, GUARANTIES OR REPRESENTATIONS AS TO THE TRUTH, ACCURACY OR COMPLETENESS OF THE DATA PROVIDED BY THE FGDL CONTRIBUTING ORGANIZATIONS. THE UNIVERSITY OF FLORIDA GEOPLAN CENTER SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED AS A RESULT OF USING, MODIFYING, CONTRIBUTING OR DISTRIBUTING THE MATERIALS.</distliab></distinfo><metainfo><metd>20010000</metd><metc><cntinfo><cntperp><cntper>Operator</cntper></cntperp><cntaddr><addrtype>Physical</addrtype><address>
+USGS Mapping Applications Center
+National Cartographic Info Center
+507 National Center
+</address><city>Reston</city><state>VA</state><postal>22092</postal></cntaddr><cntvoice>(703) 860-6045</cntvoice></cntinfo></metc><metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn><metstdv>FGDC-STD-001-1998</metstdv></metainfo><Esri><ModDate>20141111</ModDate><ModTime>13575600</ModTime><DataProperties><itemProps><itemName Sync="TRUE">usgsdem</itemName><itemLocation><linkage Sync="TRUE">file://\\Rushmore\EdContent\Courses\IL\ARC1\Data_Working\Student\ARC1\Florida\usgsdem</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><imsContentType Sync="TRUE" export="False">002</imsContentType><nativeExtBox><westBL Sync="TRUE">52621.160375</westBL><eastBL Sync="TRUE">793951.160375</eastBL><southBL Sync="TRUE">56869.206901</southBL><northBL Sync="TRUE">781639.206901</northBL><exTypeCode Sync="TRUE">1</exTypeCode></nativeExtBox></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn><csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits><projcsn Sync="TRUE">NAD_1983_HARN_Albers</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Albers&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Albers&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,400000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-84.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,24.0],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,31.5],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,24.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-19550100&lt;/XOrigin&gt;&lt;YOrigin&gt;-7526400&lt;/YOrigin&gt;&lt;XYScale&gt;225743210.67916927&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef><RasterProperties><General><PixelDepth Sync="TRUE">8</PixelDepth><HasColormap Sync="TRUE">FALSE</HasColormap><CompressionType Sync="TRUE">RLE</CompressionType><NumBands Sync="TRUE">1</NumBands><Format Sync="TRUE">GRID</Format><HasPyramids Sync="TRUE">TRUE</HasPyramids><SourceType Sync="TRUE">continuous</SourceType><PixelType Sync="TRUE">unsigned integer</PixelType><NoDataValue Sync="TRUE">255</NoDataValue></General></RasterProperties><copyHistory><copy source="U:\Courses\IL\ARC1_10_1\Data_Working\Student\ARC1\GISData\Florida\Raster\usgsdem" dest="withheld" date="20120117" time="10081700"/></copyHistory></DataProperties><SyncDate>20141111</SyncDate><SyncTime>13575600</SyncTime><CreaDate>20120117</CreaDate><CreaTime>10081700</CreaTime><ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle><SyncOnce>FALSE</SyncOnce><scaleRange><minScale>5000000</minScale><maxScale>50000</maxScale></scaleRange><ArcGISProfile>FGDC</ArcGISProfile><ArcGISFormat>1.0</ArcGISFormat></Esri><mdDateSt Sync="TRUE">20141111</mdDateSt><distInfo><distributor><distorTran><onLineSrc><linkage Sync="FALSE">withheld</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc></distorTran><distorCont><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street </delPoint><city>Redlands</city><adminArea>California </adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>:   8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+
+</cntInstr></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont></distributor><distFormat><formatName Sync="TRUE">Raster Dataset</formatName><formatVer>Raster Dataset</formatVer></distFormat></distInfo><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.0.3348</envirDesc><dataLang><languageCode value="eng" Sync="TRUE"/><countryCode value="USA" Sync="TRUE"/></dataLang><idCitation><resTitle Sync="TRUE">usgsdem</resTitle><presForm><PresFormCd value="005" Sync="TRUE"/></presForm><resAltTitle>USGS Digital Elevation Model</resAltTitle><date><reviseDate>2012-04-30T00:00:00</reviseDate></date></idCitation><spatRpType><SpatRepTypCd value="002" Sync="TRUE"/></spatRpType><dataExt><geoEle xmlns=""><GeoBndBox esriExtentType="search"><exTypeCode Sync="TRUE">1</exTypeCode><westBL Sync="TRUE">-87.639727</westBL><eastBL Sync="TRUE">-79.872646</eastBL><northBL Sync="TRUE">31.043150</northBL><southBL Sync="TRUE">24.457252</southBL></GeoBndBox></geoEle></dataExt><idPurp>This dataset contains a Digital Elevation Model (DEM). The USGSDEM is an ARC/INFO grid that consists of 92 meter cells whose values represent elevation relative to sea level. These floating point values enable us to display a continuous surface of elevation, as opposed to topography which is broken into intervals.  The cell values for this grid represent elevation in meters. DEM's may be used to do the following types of analysis: hydrologic analysis including flow direction, flow accumulation, and watershed delineation; and determination of slope and aspect, and analytical hillshading.
+
+For more information, consider the following resources:
+
+Jenson, S.K. and J.O. Domingue. 1988. Extracting Topographic Structure from
+Digital Elevation Data for Geographic Information System Analysis.
+Photogrammetric Engineering and Remote Sensing. 54(11) 1593-1600.
+
+Philip, G.M. and D.F. Watson. 1982. A Precise Method for Determining
+Contoured Surfaces. Australian Petroleum Exploration Association Journal 22:
+205-212.
+
+A good source of information regarding this USGS Digital Elevation Model can be found Online at: http://rmmcweb.cr.usgs.gov/elevation/dpi_dem.html</idPurp><idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This dataset contains a Digital Elevation Model (DEM). The USGSDEM is an ARC/INFO grid that consists of 92 meter cells whose values represent elevation relative to sea level. These floating point values enable us to display a continuous surface of elevation, as opposed to topography which is broken into intervals.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><searchKeys><keyword>Esri Training Services</keyword><keyword>ARC1</keyword><keyword>UNITED STATES GEOLOGICAL SURVEY</keyword><keyword>Digital Elevation Model</keyword><keyword>DEM</keyword><keyword>USGS</keyword><keyword>DRG</keyword><keyword>model</keyword><keyword>Elevation</keyword><keyword>conservation</keyword><keyword>topography</keyword><keyword>Planning</keyword></searchKeys><resConst><Consts><useLimit>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;THE DATA INCLUDED IN THIS APPLICATION ARE BASED ON INTERPRETATION OF AVAILABLE INFORMATION AND SHOULD NOT BE CONSTRUED AS LEGALLY BINDING. Scale is an important factor in data usage. Certain scale data sets are not suitable for some projects, analysis, or modeling purposes. Please be sure you are using the best available data. 1:24000 scale data sets are recommended for projects that are at the county level. 1:24000 data should NOT be used for high accuracy base mapping such as property parcel boundaries. 1:100000 scale data sets are recommended for projects that are at the multi-county or regional level. 1:250000 scale data sets are recommended for projects that are at the regional or state level or larger. DEM's may be used in the generation of three-dimensional graphics displaying terrain slope, apsect (direction of slope), and terrain profiles between selected points. At the USGS, DEM's have been used in combination with digital raster graphics (DRG's), digital line graphs (DLG's), and digital orthophoto quadrangles (DOQ's) to both enhance the visual information for data extraction and revision purposes and to create aesthetically pleasing and dramatic hybrid digital images. Non-graphic applications such as modeling terrain and gravity data for use in the search for energy resources, calculating the volume of proposed reservoirs, and determining landslide probability have also been developed&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</useLimit></Consts></resConst><idCredit>UNITED STATES GEOLOGICAL SURVEY (http://rmmcweb.cr.usgs.gov/elevation/dpi_dem.html)</idCredit><idPoC><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street </delPoint><city>Redlands</city><adminArea>California </adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>:   8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+
+</cntInstr></rpCntInfo></idPoC><tpCat><TopicCatCd value="006"/></tpCat></dataIdInfo><mdLang><languageCode value="eng" Sync="TRUE"/><countryCode value="USA" Sync="TRUE"/></mdLang><mdChar><CharSetCd value="005" Sync="TRUE"/></mdChar><mdHrLv><ScopeCd value="005" Sync="TRUE"/></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><refSysInfo><RefSystem><refSysID><identCode code="0" Sync="TRUE" value="0"/></refSysID></RefSystem></refSysInfo><spatRepInfo><Georect><cellGeo><CellGeoCd Sync="TRUE" value="002"/></cellGeo><numDims Sync="TRUE">2</numDims><tranParaAv Sync="TRUE">1</tranParaAv><chkPtAv Sync="TRUE">0</chkPtAv><cornerPts><pos Sync="TRUE">52621.160375 56869.206901</pos></cornerPts><cornerPts><pos Sync="TRUE">52621.160375 781639.206901</pos></cornerPts><cornerPts><pos Sync="TRUE">793951.160375 781639.206901</pos></cornerPts><cornerPts><pos Sync="TRUE">793951.160375 56869.206901</pos></cornerPts><centerPt><pos Sync="TRUE">423286.160375 419254.206901</pos></centerPt><axisDimension type="002"><dimSize Sync="TRUE">8237</dimSize><dimResol><value Sync="TRUE" uom="Meter">90.000000</value></dimResol></axisDimension><axisDimension type="001"><dimSize Sync="TRUE">8053</dimSize><dimResol><value Sync="TRUE" uom="Meter">90.000000</value></dimResol></axisDimension><ptInPixel><PixOrientCd Sync="TRUE" value="001"/></ptInPixel></Georect></spatRepInfo><contInfo><ImgDesc><contentTyp><ContentTypCd Sync="TRUE" value="003"/></contentTyp><covDim><Band><dimDescrp Sync="TRUE">usgsdem</dimDescrp><maxVal Sync="TRUE">114.000000</maxVal><minVal Sync="TRUE">0.000000</minVal><bitsPerVal Sync="TRUE">8</bitsPerVal><valUnit><UOM type="length" gmlID=""><unitSymbol Sync="TRUE">Meter</unitSymbol></UOM></valUnit></Band></covDim><attDesc>A DEM file is organized into a series of three records, A, B, and C. The A record contains</attDesc><trianInd>False</trianInd><radCalDatAv>False</radCalDatAv><camCalInAv>False</camCalInAv><filmDistInAv>False</filmDistInAv><lensDistInAv>False</lensDistInAv></ImgDesc></contInfo><Binary><Thumbnail><Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAETASADASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9UKT7
+y5qK4cxwuyI8rAEhExuPsM8Vz91450218K3XiK4M8FhaLcPIrR/vMQF942dd37tzt6jHOOaAOmor
+5T+Et9oXxv8A2j/Hd3rlnaam3gtrLT9DiOPI3Ij/AGi6SHew/wBZs2ddgKEc/NXsl78TJGs762tb
+aSXXtNn/ANNslxutot+WdgzDcPKKEMoIy6HpuwAekUV5ZN4xl8Uafostpaw6ne3gs7y3s1nVA0bw
+mR5VJVTs2vsB3H5h7MD01jq8114m1N5D/oWmMmnjYjvK88vkuT8vCooeMdz98kqFyQDraKr2t5Fe
+xebC4dNxX5T3H+elNv7Jb62MTSzwjOd0EhRvzHOKALVFfBHj748eMPBnxa0vTr7V7yyfTA4ljsr1
+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</Data></Thumbnail></Binary><mdContact><rpOrgName>UNITED STATES GEOLOGICAL SURVEY</rpOrgName><role><RoleCd value="006"/></role><rpCntInfo><cntAddress addressType=""><eMailAdd>http://www.usgs.gov </eMailAdd></cntAddress><cntOnlineRes><linkage>http://rmmcweb.cr.usgs.gov/elevation/dpi_dem.html</linkage></cntOnlineRes></rpCntInfo></mdContact><dqInfo><dqScope><scpLvl><ScopeCd value="001"/></scpLvl><scpLvlDesc><attribSet>A DEM file is organized into a series of three records, A, B, and C. The A record contains</attribSet></scpLvlDesc></dqScope><dataLineage><statement>A DEM file is organized into a series of three records, A, B, and C. The A record contains
+information defining the general characteristics of the DEM, including its name, boundaries, units
+of measurement, minimum and maximum elevations, number of B records, and projection
+parameters. Each B record consists of an elevation profile with associated header information, and
+the C record contains accuracy data. Each file contains a single A and C record, while there is a
+separate B record for each elevation profile. More detailed information about the organization of a
+DEM file can be found in the National Mapping Program Technical Instructions, Standards for
+Digital Elevation Models and Digital Elevations Models: Data User's Guide.
+
+Over the years, the USGS has collected digital elevation data using a number of production
+strategies including manual profiling from photogrammetric stereomodels; stereomodel digitizing
+of contours; digitizing topographic map contour plates; converting hypsographic and hydrographic
+tagged vector files; and performing autocorrelation via automated photogrammetric systems. Of
+these techniques, the derivation of DEM's from vector hypsographic and hydrographic data
+produces the most accurate model, and is the preferred method.
+  </statement></dataLineage></dqInfo></metadata>

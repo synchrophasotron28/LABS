@@ -1,0 +1,257 @@
+<metadata><idinfo><citation><citeinfo><origin>City of Wilson</origin><pubdate>January 2001</pubdate><pubtime>Unknown</pubtime><title Sync="TRUE">Wilson_Streets</title><geoform Sync="TRUE">vector digital data</geoform><onlink Sync="FALSE">withheld</onlink><ftname Sync="TRUE">Wilson_Streets</ftname></citeinfo></citation><descript><abstract>This data was derived from data provided by the City of Wilson, North Carolina. This dataset represents streets throughout Wilson County. The data and related materials are made available through Esri (http://www.esri.com) and are intended for educational purposes only (see Access and use limitations section).</abstract><purpose>This data was derived from data provided by the City of Wilson, North Carolina. This dataset represents streets throughout Wilson County. This data should not be used for any purpose other than that for which it was intended.
+
+This data is approved to be used for All ESRI marketing activities per CG-345/BL form:
+Demonstrations/Benchmarks
+Trade Shows/ESRI User Conferences
+ESRI World Wide Web
+ESRI Educational/Training Materials
+General Marketing, Advertising and Promotional
+ESRI Software Releases and Related Documentation
+
+This data has been modified and is not identical to the source data it was derived from. ESRI is not inviting reliance on this data, and users should always verify actual data and exercise their own professional judgement when interpreting any outcomes.</purpose><supplinf>For further information about GIS and ESRI software, visit the ESRI Website at: www.esri.com. For more information about online training, visit the ESRI Virtual Campus at: campus.esri.com. For more information about instructor-led training visit: www.esri.com/training/.</supplinf><langdata Sync="TRUE">en</langdata></descript><timeperd><timeinfo><sngdate><caldate>March 19, 1997</caldate><time>09:51:58 PM</time></sngdate></timeinfo><current>last modified</current></timeperd><status><progress>Complete</progress><update>As needed</update></status><spdom><bounding><westbc Sync="TRUE">-78.192099</westbc><eastbc Sync="TRUE">-77.622548</eastbc><northbc Sync="TRUE">35.889698</northbc><southbc Sync="TRUE">35.566048</southbc></bounding><lboundng><leftbc Sync="TRUE">2240244.592928</leftbc><rightbc Sync="TRUE">2408019.502928</rightbc><bottombc Sync="TRUE">663761.877928</bottombc><topbc Sync="TRUE">779728.307928</topbc></lboundng></spdom><keywords><theme><themekey>streets</themekey><themekey>roads</themekey><themekey>highways</themekey><themekey>street network</themekey><themekey>transportation</themekey></theme><place><placekey>Wilson County</placekey><placekey>North Carolina</placekey><placekey>USA</placekey><placekey>North America</placekey><placekt>United States of America</placekt></place></keywords><accconst>None.</accconst><useconst>
+This data is approved to be used for All ESRI marketing activities per CG-345/BL form:
+Demonstrations/Benchmarks
+Trade Shows/ESRI User Conferences
+ESRI World Wide Web
+ESRI Educational/Training Materials
+General Marketing, Advertising and Promotional
+ESRI Software Releases and Related Documentation
+</useconst><ptcontac><cntinfo><cntorgp><cntorg>Environmental Systems Research Institute Inc.</cntorg><cntper>ESRI</cntper></cntorgp><cntpos>Education material</cntpos><cntaddr><addrtype>mailing address</addrtype><address>380 New York Street</address><city>Redlands</city><state>California</state><postal>92373-8100</postal><country>USA</country></cntaddr><cntvoice>909-793-2853</cntvoice></cntinfo></ptcontac><datacred>City of Wilson, North Carolina</datacred><secinfo><secclass>Unclassified</secclass></secinfo><native Sync="TRUE">Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 4; ESRI ArcCatalog 9.0.0.535</native><natvform Sync="TRUE">Shapefile</natvform></idinfo><dataqual><attracc><attraccr>The user of this data should not assume any viable accuracy for this data other than for demonstration purposes.</attraccr></attracc><lineage><srcinfo><srctime><srccurr>publication date</srccurr></srctime></srcinfo><procstep><procdesc>Imported to Geodatabase from Shapefile.</procdesc><procdate>09/23/03</procdate><proccont><cntinfo><cntorgp><cntorg>ESRI</cntorg></cntorgp><cntpos>Educational Services - Training</cntpos><cntaddr><addrtype>mailing and physical address</addrtype><address>380 New York St.</address><city>Redlands</city><state>CA</state><postal>92373</postal><country>USA</country></cntaddr><cntvoice>(909) 793-2853</cntvoice></cntinfo></proccont><procsv>ArcGIS 8.3</procsv></procstep><procstep><procdesc>Shapefile specific fields deleted.</procdesc><procdate>09/23/03</procdate><proccont><cntinfo><cntorgp><cntorg>ESRI</cntorg></cntorgp><cntpos>Eductional Services - Training</cntpos><cntaddr><addrtype>mailing and physical address</addrtype><address>380 New York St.</address><city>Redlands</city><state>CA</state><postal>92373</postal><country>USA</country></cntaddr><cntvoice>(909) 793-2853</cntvoice></cntinfo></proccont><procsv>ArcGIS 8.3</procsv></procstep><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\joan3010\LOCALS~1\Temp\xml140.tmp</srcused><date Sync="TRUE">20030925</date><time Sync="TRUE">15050600</time><proccont><cntinfo><cntvoice>(909) 793-2853</cntvoice><cntaddr><addrtype>mailing and physical address</addrtype><address>380 New York St.</address><city>Redlands</city><state>CA</state><postal>92373</postal><country>USA</country></cntaddr><cntorgp><cntorg>ESRI</cntorg></cntorgp><cntpos>Educational Services - Training</cntpos></cntinfo></proccont><procsv>ArcGIS 8.3</procsv><procdate>09/25/03</procdate></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="FALSE">withheld</srcused><date Sync="TRUE">20040609</date><time Sync="TRUE">16454300</time></procstep></lineage></dataqual><spdoinfo><direct Sync="TRUE">Vector</direct><ptvctinf><esriterm Name="Wilson_Streets"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="3" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">5035</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo><spref><horizsys><planar><planci><plance Sync="TRUE">coordinate pair</plance><coordrep><absres Sync="TRUE">0.000256</absres><ordres Sync="TRUE">0.000256</ordres></coordrep><plandu Sync="TRUE">survey feet</plandu></planci></planar><geodetic><horizdn Sync="TRUE">North American Datum of 1983</horizdn><ellips Sync="TRUE">Geodetic Reference System 80</ellips><semiaxis Sync="TRUE">6378137.000000</semiaxis><denflat Sync="TRUE">298.257222</denflat></geodetic><cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><projcsn Sync="TRUE">NAD_1983_StatePlane_North_Carolina_FIPS_3200_Feet</projcsn></cordsysn></horizsys><vertdef><altsys><altres Sync="TRUE">1.000000</altres><altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc></altsys></vertdef></spref><eainfo><detailed Name="Wilson_Streets"><enttyp><enttypl Sync="TRUE">Wilson_Streets</enttypl><enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">5035</enttypc><enttypd>Feature Class</enttypd><enttypds>Feature Class</enttypds></enttyp><attr><attrlabl Sync="TRUE">MO</attrlabl><attalias Sync="TRUE">MO</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">YR</attrlabl><attalias Sync="TRUE">YR</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NAME</attrlabl><attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NAME2</attrlabl><attalias Sync="TRUE">NAME2</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NAME3</attrlabl><attalias Sync="TRUE">NAME3</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NAME4</attrlabl><attalias Sync="TRUE">NAME4</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">L_ADD_FROM</attrlabl><attalias Sync="TRUE">L_ADD_FROM</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">L_ADD_TO</attrlabl><attalias Sync="TRUE">L_ADD_TO</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">R_ADD_FROM</attrlabl><attalias Sync="TRUE">R_ADD_FROM</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">R_ADD_TO</attrlabl><attalias Sync="TRUE">R_ADD_TO</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">DIREC</attrlabl><attalias Sync="TRUE">DIREC</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">POWELL</attrlabl><attalias Sync="TRUE">POWELL</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">LANEDIR</attrlabl><attalias Sync="TRUE">LANEDIR</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">BUFFER</attrlabl><attalias Sync="TRUE">BUFFER</attalias><attrtype Sync="TRUE">Single</attrtype><attwidth Sync="TRUE">7</attwidth><atprecis Sync="TRUE">6</atprecis><attscale Sync="TRUE">2</attscale></attr><attr><attrlabl Sync="TRUE">R_W</attrlabl><attalias Sync="TRUE">R_W</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">WHERE_</attrlabl><attalias Sync="TRUE">WHERE_</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">ARCLINK_</attrlabl><attalias Sync="TRUE">ARCLINK_</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">MILE</attrlabl><attalias Sync="TRUE">MILE</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">9</attwidth><atprecis Sync="TRUE">8</atprecis><attscale Sync="TRUE">2</attscale></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">SHAPE_len</attrlabl><attalias Sync="TRUE">SHAPE_len</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed></eainfo><distinfo><distrib><cntinfo><cntorgp><cntorg>Environmental Systems Research Institute Inc.</cntorg><cntper>ESRI</cntper></cntorgp><cntpos>Education materials</cntpos><cntaddr><addrtype>mailing address</addrtype><address>380 New York Street</address><city>Redlands</city><state>California</state><postal>92373-8100</postal><country>USA</country></cntaddr><cntvoice>909-793-2853</cntvoice></cntinfo></distrib><resdesc>Digital data used for instruction and demonstration.</resdesc><distliab>Unauthorized distribution of this data is not permitted.</distliab><stdorder><digform><digtinfo><transize>0.000</transize><dssize Sync="TRUE">1.791</dssize></digtinfo></digform></stdorder><custom>None.</custom><techpreq>None.</techpreq><availabl><timeinfo><sngdate><caldate>unknown</caldate><time>unknown</time></sngdate></timeinfo></availabl></distinfo><metainfo><metd Sync="TRUE">20050202</metd><metc><cntinfo><cntorgp><cntorg>Environmental Systems Research Institute Inc.</cntorg><cntper>REQUIRED: The person responsible for the metadata information.</cntper></cntorgp><cntpos>Educational Services - Training</cntpos><cntaddr><addrtype>mailing address</addrtype><address>380 New York Street</address><city>Redlands</city><state>California</state><postal>92373-8100</postal><country>USA</country></cntaddr><cntvoice>909-793-2853</cntvoice></cntinfo></metc><metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn><metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv><mettc Sync="TRUE">local time</mettc><langmeta Sync="TRUE">en</langmeta></metainfo><Esri><CreaDate>20040609</CreaDate><CreaTime>16454300</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20141113</SyncDate><SyncTime>13475200</SyncTime><ModDate>20141113</ModDate><ModTime>13475200</ModTime><MetaID>{9D80F23B-AD80-4B31-900D-3455CF406178}</MetaID><DataProperties><itemProps><itemName Sync="TRUE">Wilson_Streets</itemName><imsContentType Sync="TRUE" export="False">002</imsContentType><nativeExtBox><westBL Sync="TRUE">2240244.592928</westBL><eastBL Sync="TRUE">2408019.502928</eastBL><southBL Sync="TRUE">663761.877928</southBL><northBL Sync="TRUE">779728.307928</northBL><exTypeCode Sync="TRUE">1</exTypeCode></nativeExtBox><itemSize Sync="TRUE">1.791</itemSize><itemLocation><linkage Sync="FALSE">withheld</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits><projcsn Sync="TRUE">NAD_1983_StatePlane_North_Carolina_FIPS_3200_Feet</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_StatePlane_North_Carolina_FIPS_3200_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,2000000.002616666],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-79.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,34.33333333333334],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,36.16666666666666],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,33.75],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,2264]]&lt;/WKT&gt;&lt;XOrigin&gt;-121841900&lt;/XOrigin&gt;&lt;YOrigin&gt;-93659000&lt;/YOrigin&gt;&lt;XYScale&gt;36365718.124241434&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102719&lt;/WKID&gt;&lt;LatestWKID&gt;2264&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef><copyHistory><copy source="C:\Student\ARC1\GISData\WilsonNC\Wilson\Wilson_Streets" dest="withheld" date="20120117" time="11221700"/></copyHistory></DataProperties><scaleRange><minScale>5000000</minScale><maxScale>50000</maxScale></scaleRange><ArcGISFormat>1.0</ArcGISFormat><ArcGISProfile>FGDC</ArcGISProfile></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.0.3348</envirDesc><dataLang><languageCode Sync="TRUE" value="eng"/><countryCode value="USA" Sync="TRUE"/></dataLang><idCitation><resTitle Sync="TRUE">Wilson_Streets</resTitle><presForm><PresFormCd Sync="TRUE" value="005"/></presForm><date><reviseDate>2012-05-01T00:00:00</reviseDate></date></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"/></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">2240244.592928</westBL><eastBL Sync="TRUE">2408019.502928</eastBL><northBL Sync="TRUE">779728.307928</northBL><southBL Sync="TRUE">663761.877928</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-78.192099</westBL><eastBL Sync="TRUE">-77.622548</eastBL><northBL Sync="TRUE">35.889698</northBL><southBL Sync="TRUE">35.566048</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox><dataExt><geoEle><GeoBndBox esriExtentType="search"><exTypeCode Sync="TRUE">1</exTypeCode><westBL Sync="TRUE">-78.192099</westBL><eastBL Sync="TRUE">-77.622548</eastBL><northBL Sync="TRUE">35.889698</northBL><southBL Sync="TRUE">35.566048</southBL></GeoBndBox></geoEle></dataExt><idPurp>This data was derived from data provided by the City of Wilson, North Carolina. This dataset represents streets throughout Wilson County. This data should not be used for any purpose other than that for which it was intended.
+
+This data is approved to be used for All ESRI marketing activities per CG-345/BL form:
+Demonstrations/Benchmarks
+Trade Shows/ESRI User Conferences
+ESRI World Wide Web
+ESRI Educational/Training Materials
+General Marketing, Advertising and Promotional
+ESRI Software Releases and Related Documentation
+
+This data has been modified and is not identical to the source data it was derived from. ESRI is not inviting reliance on this data, and users should always verify actual data and exercise their own professional judgement when interpreting any outcomes.</idPurp><idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This data was derived from data provided by the City of Wilson, North Carolina. This dataset represents streets throughout Wilson County. The data and related materials are made available through Esri (http://www.esri.com) and are intended for educational purposes only (see Access and use limitations section).&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><idCredit>City of Wilson, North Carolina</idCredit><searchKeys><keyword>Esri Training Services</keyword><keyword>ARC1</keyword><keyword>streets</keyword><keyword>roads</keyword><keyword>highways</keyword><keyword>street network</keyword><keyword>transportation</keyword></searchKeys><resConst><Consts><useLimit>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Use of this Data is restricted to training, demonstration, and educational purposes only. This Data cannot be sold or used for marketing without the express written consent of Environmental Systems Research Institute Inc.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;THE DATA AND RELATED MATERIALS MAY CONTAIN SOME NONCONFORMITIES, DEFECTS, OR ERRORS. ESRI DOES NOT WARRANT THAT THE DATA WILL MEET USER'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL BE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR WILL BE CORRECTED. ESRI IS NOT INVITING RELIANCE ON THIS DATA, AND THE USER SHOULD ALWAYS VERIFY ACTUAL DATA.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;THE DATA AND RELATED MATERIALS ARE PROVIDED "AS-IS," WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;IN NO EVENT SHALL ESRI AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS EXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY BUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON ANY THEORY OF LIABILITY, AND WHETHER OR NOT ESRI OR ITS LICENSOR(S) HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;In the event that the data vendor(s) has (have) granted the end user permission to redistribute the Geodata, please use proper proprietary or copyright attribution for the various data vendor(s), and provide the associated metadata file(s) with the Geodata.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;This data is approved to be used for All ESRI marketing activities per CG-345/BL form: Demonstrations/Benchmarks Trade Shows/ESRI User Conferences ESRI World Wide Web ESRI Educational/Training Materials General Marketing, Advertising and Promotional ESRI Software Releases and Related Documentation&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</useLimit></Consts></resConst><idPoC><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType=""><eMailAdd>info@esri.com</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html </linkage></cntOnlineRes></rpCntInfo></idPoC><tpCat><TopicCatCd value="015"/></tpCat><tpCat><TopicCatCd value="017"/></tpCat><tpCat><TopicCatCd value="018"/></tpCat></dataIdInfo><mdLang><languageCode Sync="TRUE" value="eng"/><countryCode value="USA" Sync="TRUE"/></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="006"/></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"/></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">http://www.esri.com/about-esri/contact.html </linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">1.791</transSize><onLineSrc><linkage>http://www.esri.com/about-esri/contact.html </linkage></onLineSrc></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName><formatVer>Shapefile</formatVer></distorFormat><distorCont><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>California</adminArea><postCode>92373-8100</postCode><eMailAdd>info@esri.com</eMailAdd><country>UNITED STATES</country></cntAddress><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+
+</cntInstr><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html </linkage></cntOnlineRes></rpCntInfo></distorCont><distorCont><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><eMailAdd>info@esri.com</eMailAdd><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>California</adminArea><postCode>92373-8100</postCode><country>UNITED STATES</country></cntAddress><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html </linkage></cntOnlineRes><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+</cntInstr></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont><distorCont><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType=""><eMailAdd>info@esri.com</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html </linkage></cntOnlineRes></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont><distorCont><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType=""><eMailAdd>info@esri.com</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html </linkage></cntOnlineRes></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></distorCont></distributor><distFormat><formatName Sync="TRUE">Shapefile</formatName><formatVer>Shapefile</formatVer></distFormat><distTranOps><transSize Sync="TRUE">1.791</transSize></distTranOps></distInfo><refSysInfo><RefSystem dimension=""><refSysID><identCode Sync="TRUE" value="2264" code="2264">NAD_1983_StatePlane_North_Carolina_FIPS_3200_Feet</identCode><idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">8.1.1</idVersion></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><geometObjs Name="Wilson_Streets"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">5035</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20141113</mdDateSt><Binary><Thumbnail><Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KK
+KACiiigAooooAKKKKACiiigAopssqQRvJIyxxoCzOxwFA6kmsbRfGmjeI7hotLuzqAR5ImmtoXeF
+XQ4ZTKF2BvYnJBBGQRVqEpJyS0QXNuiqejanHrej2OowgrDdwR3CAkEhXUMOnsayLXx5pU17eQzX
+EVpFAkcq3M8yLHJG5ZUYZOQGMcm3IwwXcCQeGqc3dJbbiudHUN1dxWUQkmcRozpGCe7MwVR+LMB+
+NV7bXdOvham2vYLpbouIWgkEgk2cOQRnhSME9jgdSK4/UfiJ4fk+LFn4TudQjh1KytVvlibgNLKT
+Ei7ugbazYU/e81ccgZ0p0Z1G0ovRNv0X/B0Bux31FFFc4wooooAKKKKACiiigAooooAKKKKACiii
+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
+UAFFFFABRRRQAUUUUAFFFFABRRRQB//Z</Data></Thumbnail></Binary><mdContact><rpOrgName>Environmental Systems Research Institute, Inc. (Esri)</rpOrgName><role><RoleCd value="005"/></role><rpCntInfo><cntAddress addressType="both"><eMailAdd>info@esri.com</eMailAdd><delPoint>380 New York Street</delPoint><city>Redlands</city><adminArea>California</adminArea><postCode>92373-8100</postCode><country>UNITED STATES</country></cntAddress><cntOnlineRes><linkage>http://www.esri.com/about-esri/contact.html </linkage></cntOnlineRes><cntPhone><voiceNum tddtty="">909-793-2853</voiceNum><faxNum>909-793-5953</faxNum></cntPhone><cntHours>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</cntHours><cntInstr>In the United States-
+     Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Technical Support by telephone (voice) between 6:00 a.m. and 6:00 p.m. Pacific time, Monday through Friday, by dialing 909-793-3774; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com; Esri holidays excluded.
+
+Outside the United States-
+        Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri International Distributor.  This information can be found at http://www.esri.com/about-esri/locations.html.
+</cntInstr></rpCntInfo><editorSave>False</editorSave><displayName>Environmental Systems Research Institute, Inc. (Esri)</displayName></mdContact><dqInfo><dataLineage><statement>Streets</statement><dataSource type=""><srcDesc>Streets</srcDesc></dataSource></dataLineage></dqInfo></metadata>
