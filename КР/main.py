@@ -73,10 +73,8 @@ def iterative_loop():
 
         S = S2(sigma_x=sigma_x, density=density, V=V, Vr=Vr)
         T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt)
-        W = 0
-        # S2 = lambda sigma_x, density, V, Vr: -sigma_x * density * V * Vr
-        # T2 = lambda sigma_x, density, V, Vt: -sigma_x * density * V * Vt
-        # W2 = 0
+        W = W2
+
 
         S_list.append(S)
         T_list.append(T)
