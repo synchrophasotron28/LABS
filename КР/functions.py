@@ -15,6 +15,10 @@ W1 = lambda r, i, u: -Epsilon / r ** 4 * math.sin(2 * i) * math.sin(u)
 S2 = lambda sigma_x, density, V, Vr: -sigma_x * density * V * Vr
 T2 = lambda sigma_x, density, V, Vt: -sigma_x * density * V * Vt
 W2 = 0
+
+S21 = lambda sigma_x, density, V, Vr: -sigma_x * density * V * Vr
+T21 = lambda sigma_x, density, V, Vt: -sigma_x * density * V * Vt
+W21 = lambda sigma_x, density, V, r, i, u: -sigma_x * density * V * 7.292115855306578e-05 * r * sin(i) * sin(u)
 # ===================================================================================
 
 # Правые части диф уравнений метода оскулирующих элементов
@@ -141,7 +145,8 @@ def find_density(H):
 
     if 500 < H:
         if H > 1500:
-            print(f'WARNING H={H}')
+            pass
+            # print(f'WARNING H={H}')
         table = table2
 
     index = table['F0'].index(Fa)

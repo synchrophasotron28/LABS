@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
 
-revolutions = 8  # Количество оборотов
+revolutions = 2 * 4  # Количество оборотов
 theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []
@@ -53,6 +53,7 @@ def iterative_loop():
 
         H = find_H(Ra=r, theta=theta, i=i, big_omega=OMEGA, omega=omega, p=p, e=e, tau=tau)  # высота
         density = find_density(H=H)  # плотность
+        # density = find_density(H=r-6371)  # плотность
 
         H_list.append(H)
         Density_list.append(density)
@@ -71,10 +72,9 @@ def iterative_loop():
         W = W1(r=r, i=i, u=theta + omega)
         # T = S = W = 0
 
-        S = S2(sigma_x=sigma_x, density=density, V=V, Vr=Vr)
-        T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt)
+        S = S2(sigma_x=sigma_x, density=density, V=V, Vr=Vr) * 1e3
+        T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt) * 1e3
         W = W2
-
 
         S_list.append(S)
         T_list.append(T)
@@ -109,6 +109,9 @@ def iterative_loop():
 
 def chart(x, y, title='', xlabel='', ylabel=''):
     plt.plot(x, y, linewidth=1)
+    plt.plot(len(y) * [math.pi], y, 'r')
+    plt.plot(len(y) * [2 * math.pi], y, 'r')
+    plt.plot(len(y) * [3 * math.pi], y, 'r')
     if title == 'r(θ)':
         plt.plot(0, 0, marker='.', markersize=30, color='green', markerfacecolor='lightgreen')
         plt.plot(x[0], y[0], marker='.', markersize=20, color='blue', markerfacecolor='blue')
@@ -144,6 +147,9 @@ def main():
 
     if Density_list:
         chart(x=theta_list, y=Density_list[:len(theta_list)], title='ρ(θ)', xlabel='θ, рад', ylabel='ρ, кг/м^3')
+
+    print('[max]:', max(S_list))
+    print('[min]:', min(S_list))
 
 
 if __name__ == '__main__':

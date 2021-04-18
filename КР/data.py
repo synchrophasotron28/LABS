@@ -6,6 +6,8 @@ import math
 i = math.radians(20.8)
 h_a = 1740
 h_p = 350
+
+# h_a = h_p = 1400
 OMEGA = math.radians(10)
 U = math.radians(7)
 Sa = 23
