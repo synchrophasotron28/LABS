@@ -1,5 +1,7 @@
 from func import *
 import matplotlib.pyplot as plt
+import numpy as np
+import math
 
 
 def find_Psi_and_X(x1, x2, psi1, psi2, tk, dt):
@@ -24,28 +26,72 @@ def find_Psi_and_X(x1, x2, psi1, psi2, tk, dt):
 
 
 func = lambda psi1, psi2: criterion_function(*find_Psi_and_X(x1=1, x2=1, psi1=psi1, psi2=psi2, tk=4, dt=.01))
-step = 0.1
-rate = 0.1
-psi1 = 20
-psi2 = 20
-# Минимизируем по psi1
+step = .001
+rate = 1e-8
+psi1 = 0
+psi2 = 0
+f1 = f2 = func(psi1, psi2)
 
-d_psi1 = (func(psi1 + step, psi2) - func(psi1, psi2)) / step
-d_psi2 = (func(psi1, psi2 + step) - func(psi1, psi2)) / step
 
-from time import sleep
+def rotate_vector(x, y, angle):
+    x1 = x * math.cos(angle) - y * math.sin(angle)
+    y1 = y * math.cos(angle) + x * math.sin(angle)
+    return x1, y1
 
+
+# while 1:
+#     for angle in np.linspace(0, 2 * math.pi, 100):
+#         x, y = rotate_vector(x=1, y=0, angle=angle)
+#         if func(psi1 + x * step, psi2 + y * step) < func(psi1, psi2):
+#             psi1 += x * step
+#             psi2 += y * step
+#             print(func(psi1, psi2), 'psi1', psi1, 'psi2', psi2, 'vector: ', [x,y])
+#             # break
+#             # input()
+i = 0
 while 1:
-    d_psi1 = (func(psi1 + step, psi2) - func(psi1, psi2)) / step
-    d_psi2 = (func(psi1, psi2 + step) - func(psi1, psi2)) / step
-    print(d_psi1, d_psi2)
+    f_min = func(psi1, psi2)
+    direct = (1, 0)
+    # Минимальное направление
+    # ================================================================
+    for angle in np.linspace(0, 2 * math.pi, 100):
+        x, y = rotate_vector(x=1, y=0, angle=angle)
+        # if func(psi1 + x * step, psi2 + y * step) < func(psi1, psi2):
+        #     direct = (x, y)
 
-    print('[BEFORE]',func(psi1, psi2))
-    psi1 -= rate * d_psi1
-    psi2 -= rate * d_psi2
-    print(f'psi1: {psi1} psi2: {psi2}')
-    print('[AFTER]',func(psi1, psi2))
-    input()
+        if func(psi1 + x * step, psi2 + y * step) < f_min:
+            direct = (x, y)
+            f_min = func(psi1 + x * step, psi2 + y * step)
+            # print(direct)
+    # ================================================================
+
+    x, y = direct
+
+    # _step = -10
+    # final_step = 0
+    # delta = 0
+    # while _step < 10:
+    #     # print((func(psi1 + _step * x, psi2 + _step * y) - func(psi1, psi2)))
+    #     if (func(psi1 + _step * x, psi2 + _step * y) - func(psi1, psi2)) < delta:
+    #         # print('+++++++++++')
+    #         delta = func(psi1 + _step * direct[0], psi2 + _step * direct[1]) - func(psi1, psi2)
+    #         final_step = _step
+    #     _step += 1e-2
+    # print('[STEP LOG]', final_step)
+
+    final_step = step
+    if func(psi1 + x * step, psi2 + y * step) > func(psi1, psi2):
+        break
+    psi1 += x * step
+    psi2 += y * step
+    if i % 100 == 0:
+        print(func(psi1, psi2), 'psi1', psi1, 'psi2', psi2, 'vector: ', [x, y])
+    i += 1
+
+    # input()
+
+# print(func(psi1, psi2), 'psi1', psi1, 'psi2', psi2, 'vector: ', [x, y])
+print(func(psi1, psi2), 'psi1', psi1, 'psi2', psi2)
 
 
 def build(x1, x2, psi1, psi2, tk, dt):
@@ -81,25 +127,33 @@ def build(x1, x2, psi1, psi2, tk, dt):
     plt.plot(t_list, x1_list, label='x1')
     plt.plot(t_list, x2_list, label='x2')
     plt.plot(t_list, [-1 / 6 * i for i in psi2_list], label='u')
+    plt.title(f'Значение критерия {round(criterion_function(x1, x2, psi1, psi2), 8)}')
     plt.legend()
     plt.grid()
+    plt.savefig('chart.png')
     plt.show()
-    print(x1, x2, psi1, psi2)
 
 
-# [[19.11822019]
-#  [33.35435676]]
-build(x1=1, x2=1, psi1=19.11822019, psi2=33.35435676, tk=4, dt=.01)
-print(criterion_function(x1=0.03612123531325777, x2=-0.001330149877266447, psi1=0.07251165346582268,
-                         psi2=-0.003287971864588375))
+# build(x1=1, x2=1, psi1=19.11822019, psi2=33.35435676, tk=4, dt=.01)
+build(x1=1, x2=1, psi1=psi1, psi2=psi2, tk=4, dt=.01)
 
+x = []
+y = []
+z = []
+s = [10] * 40
 
-print(func(0,0))
-# import numpy as np
-# x = np.linspace(-20, 20, 100)
-# y = x
-# z = [func(i,i) for i in x]
+# for i in np.arange(-40, 40):
+#     for j in np.arange(-40, 40):
+#         x.append(i)
+#         y.append(j)
+#         z.append(func(i, j))
+#
+# print(func(psi1=0, psi2=0))
 # fig = plt.figure()
 # ax = fig.add_subplot(111, projection='3d')
-# ax.plot(x, y, z, label='parametric curve')
+# ax.scatter(x, y, z, s=10)
+# ax.scatter([19.11822019], [33.35435676], [func(psi1=19.11822019, psi2=33.35435676)], s=40)
+# ax.scatter([0], [0], [func(psi1=0, psi2=0)], s=40)
+# ax.scatter([0 + step], [0], [func(psi1=0 + step, psi2=0)], s=40)
+# ax.scatter([0], [0 + step], [func(psi1=0, psi2=0 + step)], s=40)
 # plt.show()

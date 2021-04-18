@@ -141,7 +141,7 @@ def find_X_and_U(t, t0, K, K_inv, K_matrix):
 	X 	= (Fi_11 - 2*Fi_12.dot(K_matrix)).dot(X0)
 	Psi = (Fi_21 - 2*Fi_22.dot(K_matrix)).dot(X0)
 	print(Psi)
-	input()
+
 	u = -1/6*Psi[1]
 
 	return (X, u)
