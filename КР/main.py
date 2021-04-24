@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
 
-revolutions = 2 * 4  # Количество оборотов
+revolutions = 2 * 2  # Количество оборотов
 theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []
@@ -45,6 +45,9 @@ def iterative_loop():
     r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
 
     for theta in theta_list:
+        if theta_list.index(theta) % 1000 == 0:
+            print(theta)
+
         # Радиус
         # ==============================
         r = get_r(p=p, e=e, theta=theta)
@@ -53,6 +56,7 @@ def iterative_loop():
 
         H = find_H(Ra=r, theta=theta, i=i, big_omega=OMEGA, omega=omega, p=p, e=e, tau=tau)  # высота
         density = find_density(H=H)  # плотность
+        # density = -1  # плотность
         # density = find_density(H=r-6371)  # плотность
 
         H_list.append(H)
@@ -76,6 +80,7 @@ def iterative_loop():
         T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt) * 1e3
         W = W2
 
+        # S = T = W = 0
         S_list.append(S)
         T_list.append(T)
         W_list.append(W)
@@ -92,6 +97,14 @@ def iterative_loop():
         omega1 = omega + R_omega(F=F, S=S, theta=theta, e=e, T=T, r=r, p=p, W=W, i=i, u=theta + omega) * d_theta
         e1 = e + R_e(F=F, S=S, theta=theta, T=T, r=r, p=p, e=e) * d_theta
         tau1 = tau + R_tau(F=F, p=p) * d_theta
+        #
+        # p1 = p + runge_p(r=r, S=S, T=T, e=e, p=p, theta=theta, d_theta=d_theta)
+        # OMEGA1 = OMEGA + runge_OMEGA(S=S, T=T, W=W, r=r, e=e, p=p, omega=omega, i=i, theta=theta, d_theta=d_theta)
+        # i1 = i + runge_i(S=S, T=T, W=W, r=r, e=e, p=p, omega=omega, theta=theta, d_theta=d_theta)
+        # omega1 = omega + runge_omega(S=S, T=T, W=W, r=r, e=e, p=p, omega=omega, theta=theta, d_theta=d_theta)
+        # e1 = e + runge_e(S=S, theta=theta, T=T, r=r, p=e, e=e, d_theta=d_theta)
+        # tau1 = tau + runge_tau(r=r, S=S, T=T, e=e, p=p, theta=theta, d_theta=d_theta)
+
         # ======================================================================================================
 
         # Занесение новых данных в контейнеры
@@ -109,9 +122,9 @@ def iterative_loop():
 
 def chart(x, y, title='', xlabel='', ylabel=''):
     plt.plot(x, y, linewidth=1)
-    plt.plot(len(y) * [math.pi], y, 'r')
-    plt.plot(len(y) * [2 * math.pi], y, 'r')
-    plt.plot(len(y) * [3 * math.pi], y, 'r')
+    # plt.plot(len(y) * [math.pi], y, 'r')
+    # plt.plot(len(y) * [2 * math.pi], y, 'r')
+    # plt.plot(len(y) * [3 * math.pi], y, 'r')
     if title == 'r(θ)':
         plt.plot(0, 0, marker='.', markersize=30, color='green', markerfacecolor='lightgreen')
         plt.plot(x[0], y[0], marker='.', markersize=20, color='blue', markerfacecolor='blue')

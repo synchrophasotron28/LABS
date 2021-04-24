@@ -38,7 +38,87 @@ R_tau = lambda F, p: F * math.sqrt(398603 / p)
 
 geT_F = lambda r, S, T, theta, e, p: (398603 / r ** 2 + S * math.cos(theta) / e - T * (1 + r / p) * math.sin(
     theta) / e) ** -1
+
+
 # =====================================================================================================================
+
+# Рунге Кутты
+# ========================================
+def runge_p(r, S, T, e, p, theta, d_theta):
+    k1 = R_p(r=r, T=T, F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p))
+    k2 = R_p(r=r, T=T, F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p + 0.5 * d_theta * k1))
+    k3 = R_p(r=r, T=T, F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p + 0.5 * d_theta * k2))
+    k4 = R_p(r=r, T=T, F=geT_F(r=r, S=S, T=T, theta=theta + d_theta, e=e, p=p + d_theta * k3))
+    return d_theta / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+def runge_OMEGA(S, T, W, r, e, p, omega, i, theta, d_theta):
+    k1 = R_OMEGA(W=W, F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p), r=r, p=p, u=theta + omega, i=i)
+
+    k2 = R_OMEGA(W=W, F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), r=r, p=p,
+                 u=theta + 0.5 * d_theta + omega, i=i)
+
+    k3 = R_OMEGA(W=W, F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), r=r, p=p,
+                 u=theta + 0.5 * d_theta + omega, i=i)
+
+    k4 = R_OMEGA(W=W, F=geT_F(r=r, S=S, T=T, theta=theta + d_theta, e=e, p=p), r=r, p=p, u=theta + d_theta + omega, i=i)
+    return d_theta / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+def runge_i(S, T, W, r, e, p, omega, theta, d_theta):
+    k1 = R_i(W=W, F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p), r=r, p=p, u=theta + omega)
+    k2 = R_i(W=W, F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), r=r, p=p,
+             u=theta + 0.5 * d_theta + omega)
+    k3 = R_i(W=W, F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), r=r, p=p,
+             u=theta + 0.5 * d_theta + omega)
+    k4 = R_i(W=W, F=geT_F(r=r, S=S, T=T, theta=theta + d_theta, e=e, p=p), r=r, p=p, u=theta + d_theta + omega)
+
+    return d_theta / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+def runge_omega(S, T, W, r, e, p, omega, theta, d_theta):
+    k1 = R_omega(F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p), S=S, theta=theta, e=e, T=T, r=r, p=p, W=W, i=i,
+                 u=theta + omega)
+
+    k2 = R_omega(F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), S=S, theta=theta + 0.5 * d_theta, e=e,
+                 T=T, r=r, p=p, W=W, i=i,
+                 u=theta + 0.5 * d_theta + omega + 0.5 * d_theta * k1)
+
+    k3 = R_omega(F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), S=S, theta=theta + 0.5 * d_theta, e=e,
+                 T=T, r=r, p=p, W=W, i=i,
+                 u=theta + 0.5 * d_theta + omega + 0.5 * d_theta * k2)
+
+    k4 = R_omega(F=geT_F(r=r, S=S, T=T, theta=theta + d_theta, e=e, p=p), S=S, theta=theta + d_theta, e=e, T=T, r=r,
+                 p=p, W=W, i=i,
+                 u=theta + d_theta + omega + d_theta * k3)
+    return d_theta / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+def runge_e(S, theta, T, r, p, e, d_theta):
+    k1 = R_e(F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p), S=S, theta=theta, T=T, r=r, p=p, e=e)
+
+    k2 = R_e(F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e + 0.5 * d_theta * k1, p=p), S=S,
+             theta=theta + 0.5 * d_theta, T=T, r=r, p=p, e=e + 0.5 * d_theta * k1)
+
+    k3 = R_e(F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e + 0.5 * d_theta * k2, p=p), S=S,
+             theta=theta + 0.5 * d_theta, T=T, r=r, p=p, e=e + 0.5 * d_theta * k2)
+
+    k4 = R_e(F=geT_F(r=r, S=S, T=T, theta=theta + d_theta, e=e + d_theta * k3, p=p), S=S,
+             theta=theta + d_theta, T=T, r=r, p=p, e=e + d_theta * k3)
+
+    return d_theta / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+def runge_tau(r, S, T, e, p, theta, d_theta):
+    k1 = R_tau(F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p), p=p)
+    k2 = R_tau(F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), p=p)
+    k3 = R_tau(F=geT_F(r=r, S=S, T=T, theta=theta + 0.5 * d_theta, e=e, p=p), p=p)
+    k4 = R_tau(F=geT_F(r=r, S=S, T=T, theta=theta + d_theta, e=e, p=p), p=p)
+    return d_theta / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+# ========================================
+
 
 # Вспомогательные функции
 # ========================================================
@@ -140,7 +220,7 @@ def find_H(Ra, theta, i, big_omega, omega, p, e, tau):
 def find_density(H):
     table = None
 
-    if 120 <= H <= 500:
+    if H <= 500:
         table = table1
 
     if 500 < H:
