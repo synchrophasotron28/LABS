@@ -39,15 +39,6 @@ def rotate_vector(x, y, angle):
     return x1, y1
 
 
-# while 1:
-#     for angle in np.linspace(0, 2 * math.pi, 100):
-#         x, y = rotate_vector(x=1, y=0, angle=angle)
-#         if func(psi1 + x * step, psi2 + y * step) < func(psi1, psi2):
-#             psi1 += x * step
-#             psi2 += y * step
-#             print(func(psi1, psi2), 'psi1', psi1, 'psi2', psi2, 'vector: ', [x,y])
-#             # break
-#             # input()
 i = 0
 while 1:
     f_min = func(psi1, psi2)
@@ -66,18 +57,6 @@ while 1:
     # ================================================================
 
     x, y = direct
-
-    # _step = -10
-    # final_step = 0
-    # delta = 0
-    # while _step < 10:
-    #     # print((func(psi1 + _step * x, psi2 + _step * y) - func(psi1, psi2)))
-    #     if (func(psi1 + _step * x, psi2 + _step * y) - func(psi1, psi2)) < delta:
-    #         # print('+++++++++++')
-    #         delta = func(psi1 + _step * direct[0], psi2 + _step * direct[1]) - func(psi1, psi2)
-    #         final_step = _step
-    #     _step += 1e-2
-    # print('[STEP LOG]', final_step)
 
     final_step = step
     if func(psi1 + x * step, psi2 + y * step) > func(psi1, psi2):
@@ -126,7 +105,9 @@ def build(x1, x2, psi1, psi2, tk, dt):
 
     plt.plot(t_list, x1_list, label='x1')
     plt.plot(t_list, x2_list, label='x2')
-    plt.plot(t_list, [-1 / 6 * i for i in psi2_list], label='u')
+    plt.plot(t_list, [-1 / (2 * 3) * i for i in psi2_list], label='u')
+    for i in range(len(t_list)):
+        print(f'{t_list[i]} {x1_list[i]} {x2_list[i]} {-1 / (2 * 3) * psi2_list[i]}')
     plt.title(f'Значение критерия {round(criterion_function(x1, x2, psi1, psi2), 8)}')
     plt.legend()
     plt.grid()
@@ -134,8 +115,16 @@ def build(x1, x2, psi1, psi2, tk, dt):
     plt.show()
 
 
+# build(x1=1, x2=1, psi1=19.00015663252696, psi2=33.1922603980915, tk=4, dt=.01)
+# build(x1=1, x2=1, psi1=19.059020751361658, psi2=33.273064692004475, tk=4, dt=.01)
+#
+# build(x1=1, x2=1, psi1=19.116094203710134, psi2=33.351463687549064, tk=4, dt=.01)
 # build(x1=1, x2=1, psi1=19.11822019, psi2=33.35435676, tk=4, dt=.01)
 build(x1=1, x2=1, psi1=psi1, psi2=psi2, tk=4, dt=.01)
+
+# build(x1=1, x2=1, psi1=31.73750843904442, psi2=55.21301214267813, tk=4, dt=.01) # Это для W
+# build(x1=1, x2=1, psi1=19.285303256172018, psi2=33.88677171925858, tk=4, dt=.01) # Это для Q
+# build(x1=1, x2=1, psi1=19.11543277037631, psi2=33.35058625164072, tk=4, dt=.01) # Это для лямбд
 
 x = []
 y = []
@@ -157,3 +146,28 @@ s = [10] * 40
 # ax.scatter([0 + step], [0], [func(psi1=0 + step, psi2=0)], s=40)
 # ax.scatter([0], [0 + step], [func(psi1=0, psi2=0 + step)], s=40)
 # plt.show()
+
+'''
+Обычное
+t0=0 x1=1                   x2=1                    u=-5.55905946
+t1=1 x1=1.0111201654177928  x2=-0.3026780794602267  u=-0.9450667740473899
+tk=4 x1=0.03617205046121464 x2=-0.00169383826522897 u=0.00019678833503765353
+
+
+С увеличением W
+t0=0    x1=1                    x2=1                        u=-5.5213012142678135
+t1=1    x1=1.0120846990101422   x2=-0.3055726152603542      u=-0.9477719978847985
+tk=4    x1=0.04732491834144866  x2=0.0063573937198358145    u=0.0007767286839485698
+
+
+С увеличением q22
+t0=0    x1=1                    x2=1                        u=-5.647795286543097
+t1=1    x1=1.0125034872398249   x2=-0.2935259147229142      u=-0.9402484618961553
+tk=4    x1=0.2650623429597535  x2=0.10898084394444502       u=-0.040090146324358006
+
+С увеличением обеих лямбд
+t0=0    x1=1                    x2=1                        u=-5.5584310419401195
+t1=1    x1=1.0117212041711365   x2=-0.30230363077059397      u=-0.94525939288482
+tk=4    x1=0.05706809709469048  x2=0.0008906972041678559    u=-0.03240742092597573
+
+'''
