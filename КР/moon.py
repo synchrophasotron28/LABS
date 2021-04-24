@@ -39,16 +39,16 @@ moon_f = 4900.8*3600**2	# km^3/hour^-2
 def find_moon_position(t):
 	n = math.sqrt(moon_f/a**3)
 	M = n*t
-	print(M)
-	E = 0
-	dE = 1e-2
-	error = 1e-3
-
-	while math.fabs(E - e*E - M) > error:
+	# print(M)
+	E = -10
+	dE = 1e-3
+	error = 1e-2
+	# print('M',M,'t',t)
+	while math.fabs(E - e*math.sin(E) - M) > error:
 		E += dE
 
 	theta = 2*math.atan(math.sqrt((1+e)/(1-e))*math.tan(E/2))
-	print(theta)
+	print('t',t,'theta',theta)
 
 
 
@@ -74,6 +74,6 @@ def find_moon_STW(moon_coord, spacecraft_coord, theta):
 # print(math.sqrt(moon_f/a**3))
 
 # time=0
-for time in range(10000):
+for time in range(100):
 	find_moon_position(time)
 	# time+=0.1
