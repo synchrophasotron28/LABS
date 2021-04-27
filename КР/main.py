@@ -2,10 +2,11 @@ from data import *
 from functions import *
 import numpy as np
 import matplotlib.pyplot as plt
+import moon
 
 sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
 
-revolutions = 2 * 2  # Количество оборотов
+revolutions = 2 * 4.5  # Количество оборотов
 theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []
@@ -39,46 +40,69 @@ tau_list.append(tau)
 H_list = []
 Density_list = []
 
+spacecraft_X, spacecraft_Y, spacecraft_Z = [], [], []
+moon_X, moon_Y, moon_Z = [], [], []
+
 
 def iterative_loop():
     global r, p, OMEGA, omega, i, e, tau
+    global spacecraft_X, spacecraft_Y, spacecraft_Z
+    global moon_X, moon_Y, moon_Z
+
     r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
 
     for theta in theta_list:
         if theta_list.index(theta) % 1000 == 0:
             print(theta)
 
+        # time = get_t_from_tau(tau=tau, theta=theta, p=p, e=e)
+        # print('[LOG]', theta, time / 3600)
         # Радиус
         # ==============================
         r = get_r(p=p, e=e, theta=theta)
         r_list.append(r)
         # ==============================
 
-        H = find_H(Ra=r, theta=theta, i=i, big_omega=OMEGA, omega=omega, p=p, e=e, tau=tau)  # высота
-        density = find_density(H=H)  # плотность
-        # density = -1  # плотность
-        # density = find_density(H=r-6371)  # плотность
-
-        H_list.append(H)
-        Density_list.append(density)
+        # H = find_H(Ra=r, theta=theta, i=i, big_omega=OMEGA, omega=omega, p=p, e=e, tau=tau)  # высота
+        # density = find_density(H=H)  # плотность
+        #
+        # H_list.append(H)
+        # Density_list.append(density)
 
         # Скорости
         # ================================
-        Vr = get_Vr(p=p, theta=theta, e=e)
-        Vt = get_Vt(p=p, theta=theta, e=e)
-        V = math.hypot(Vr, Vt)
+        # Vr = get_Vr(p=p, theta=theta, e=e)
+        # Vt = get_Vt(p=p, theta=theta, e=e)
+        # V = math.hypot(Vr, Vt)
         # ================================
 
         # Компоненты возмущающих ускорений
         # ===============================
-        T = T1(r=r, i=i, u=theta + omega)
-        S = S1(r=r, i=i, u=theta + omega)
-        W = W1(r=r, i=i, u=theta + omega)
-        # T = S = W = 0
+        # T = T1(r=r, i=i, u=theta + omega)
+        # S = S1(r=r, i=i, u=theta + omega)
+        # W = W1(r=r, i=i, u=theta + omega)
+        # # T = S = W = 0
+        #
+        # S = S2(sigma_x=sigma_x, density=density, V=V, Vr=Vr) * 1e3
+        # T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt) * 1e3
+        # W = W2
 
-        S = S2(sigma_x=sigma_x, density=density, V=V, Vr=Vr) * 1e3
-        T = T2(sigma_x=sigma_x, density=density, V=V, Vt=Vt) * 1e3
-        W = W2
+        # Возмущения от Луны
+        # =================================================================================================
+        current_time = get_t_from_tau(tau=tau, theta=theta, p=p, e=e)
+        moon_coord = moon.find_moon_position(t=current_time)
+        spacecraft_coord = get_agesk(theta=theta, ra=r, i=i, big_omega=OMEGA, omega=omega)
+
+        moon_X.append(moon_coord[0])
+        moon_Y.append(moon_coord[1])
+        moon_Z.append(moon_coord[2])
+
+        spacecraft_X.append(spacecraft_coord[0])
+        spacecraft_Y.append(spacecraft_coord[1])
+        spacecraft_Z.append(spacecraft_coord[2])
+
+        S, T, W = moon.find_moon_STW(moon_coord=moon_coord, spacecraft_coord=spacecraft_coord, theta=theta)
+        # =================================================================================================
 
         # S = T = W = 0
         S_list.append(S)
@@ -138,6 +162,47 @@ def chart(x, y, title='', xlabel='', ylabel=''):
     plt.show()
 
 
+def chart_3d():
+    global spacecraft_X, spacecraft_Y, spacecraft_Z
+    global moon_X, moon_Y, moon_Z
+
+    s = [1] * len(moon_X)
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Луна
+    # ================================================================
+    ax.scatter(moon_X, moon_Y, moon_Z, s, color='dimgray', label='Траектория Луны')
+    # ax.scatter(moon_X[0], moon_Y[0], moon_Z[0], s=moon.moon_radius, color='darkgray')
+    ax.scatter(moon_X[-1], moon_Y[-1], moon_Z[-1], s=moon.moon_radius, color='silver')
+    # ================================================================
+
+    n = 30
+    X = [i for i in spacecraft_X if (spacecraft_X.index(i) + 1) % n == 0]
+    Y = [i for i in spacecraft_Y if (spacecraft_Y.index(i) + 1) % n == 0]
+    Z = [i for i in spacecraft_Z if (spacecraft_Z.index(i) + 1) % n == 0]
+    s = [1] * len(X)
+
+    # КЛА
+    # ================================================================
+    # ax.scatter(spacecraft_X, spacecraft_Y, spacecraft_Z, s, color='darkkhaki', label='Траектория КЛА')
+    ax.scatter(X, Y, Z, s, color='darkkhaki', label='Траектория КЛА')
+    ax.scatter(spacecraft_X[0], spacecraft_Y[0], spacecraft_Z[0], s=80, color='orange', label='Начальное положение КЛА')
+    ax.scatter(spacecraft_X[-1], spacecraft_Y[-1], spacecraft_Z[-1], s=80, color='red', label='Конечное положение КЛА')
+    # ================================================================
+
+    # Земля
+    # ======================================================
+    ax.scatter([0], [0], [0], s=Earth_radius, color='green')
+    # ======================================================
+
+    plt.title('Траектории движения Луны и КЛА');
+
+    ax.legend()
+    plt.savefig('./charts/{}.png'.format('traektoria'))
+    plt.show()
+
+
 def main():
     iterative_loop()
     x = [r_list[i] * math.cos(theta_list[i]) for i in range(len(theta_list))]
@@ -161,8 +226,7 @@ def main():
     if Density_list:
         chart(x=theta_list, y=Density_list[:len(theta_list)], title='ρ(θ)', xlabel='θ, рад', ylabel='ρ, кг/м^3')
 
-    print('[max]:', max(S_list))
-    print('[min]:', min(S_list))
+    chart_3d()
 
 
 if __name__ == '__main__':

@@ -7,7 +7,7 @@ import numpy as np
 # Формулы для рассчёта компонентов возмущающего ускорения,
 # вызванного нецентральность гравитационного поля Земли
 # ===================================================================================
-Epsilon = 398603 * 66.07 * 1e3
+Epsilon = Earth_gravity_potential * 66.07 * 1e3
 S1 = lambda r, i, u: Epsilon / r ** 4 * (3 * math.sin(i) ** 2 * math.sin(u) ** 2 - 1)
 T1 = lambda r, i, u: -Epsilon / r ** 4 * math.sin(i) ** 2 * math.sin(2 * u)
 W1 = lambda r, i, u: -Epsilon / r ** 4 * math.sin(2 * i) * math.sin(u)
@@ -34,15 +34,19 @@ R_omega = lambda F, S, theta, e, T, r, p, W, i, u: F * (
 
 R_e = lambda F, S, theta, T, r, p, e: F * (S * math.sin(theta) + T * ((1 + r / p) * math.cos(theta) + e * r / p))
 
-R_tau = lambda F, p: F * math.sqrt(398603 / p)
+R_tau = lambda F, p: F * math.sqrt(Earth_gravity_potential / p)
 
-geT_F = lambda r, S, T, theta, e, p: (398603 / r ** 2 + S * math.cos(theta) / e - T * (1 + r / p) * math.sin(
+geT_F = lambda r, S, T, theta, e, p: (Earth_gravity_potential / r ** 2 + S * math.cos(theta) / e - T * (
+        1 + r / p) * math.sin(
     theta) / e) ** -1
 
 
 # =====================================================================================================================
 
-# Рунге Кутты
+# Рунге Куттэ
+# !!!
+# НЕ РАБОТАЕТ
+# !!!
 # ========================================
 def runge_p(r, S, T, e, p, theta, d_theta):
     k1 = R_p(r=r, T=T, F=geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p))
@@ -126,8 +130,8 @@ get_a = lambda ra, rp: 0.5 * (ra + rp)
 get_e = lambda ra, rp, a: (ra - rp) / (2 * a)
 get_r = lambda p, e, theta: p / (1 + e * math.cos(theta))
 get_p = lambda a, e: a * (1 - e ** 2)
-get_Vr = lambda p, theta, e: sqrt(398603 / p) * e * sin(theta)
-get_Vt = lambda p, theta, e: sqrt(398603 / p) * (1 + e * cos(theta))
+get_Vr = lambda p, theta, e: sqrt(Earth_gravity_potential / p) * e * sin(theta)
+get_Vt = lambda p, theta, e: sqrt(Earth_gravity_potential / p) * (1 + e * cos(theta))
 # ========================================================
 
 get_sigma_x = lambda Cxa, Sa, m: Sa * Cxa / (2 * m)
@@ -142,7 +146,7 @@ def get_t_from_tau(tau, theta, p, e):
         sum += d_theta * f(angle=theta1 + 0.5 * d_theta)
         theta1 += d_theta
 
-    sum *= math.sqrt(p / 398603)
+    sum *= math.sqrt(p / Earth_gravity_potential)
     sum += tau
     return sum
 
