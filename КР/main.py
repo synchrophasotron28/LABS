@@ -6,7 +6,7 @@ import moon
 
 sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
 
-revolutions = 2 * 4.5  # Количество оборотов
+revolutions = 2 * 4  # Количество оборотов
 theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []
@@ -90,7 +90,7 @@ def iterative_loop():
         # Возмущения от Луны
         # =================================================================================================
         current_time = get_t_from_tau(tau=tau, theta=theta, p=p, e=e)
-        moon_coord = moon.find_moon_position(t=current_time)
+        moon_coord, moon_theta = moon.find_moon_position(t=current_time)
         spacecraft_coord = get_agesk(theta=theta, ra=r, i=i, big_omega=OMEGA, omega=omega)
 
         moon_X.append(moon_coord[0])
@@ -101,7 +101,7 @@ def iterative_loop():
         spacecraft_Y.append(spacecraft_coord[1])
         spacecraft_Z.append(spacecraft_coord[2])
 
-        S, T, W = moon.find_moon_STW(moon_coord=moon_coord, spacecraft_coord=spacecraft_coord, theta=theta)
+        S, T, W = moon.find_moon_STW(moon_coord=moon_coord, spacecraft_coord=spacecraft_coord, theta=moon_theta)
         # =================================================================================================
 
         # S = T = W = 0
@@ -219,6 +219,14 @@ def main():
     chart(x=theta_list, y=S_list[:len(theta_list)], title='S(θ)', xlabel='θ, рад', ylabel='S, км/ч^2')
     chart(x=theta_list, y=T_list[:len(theta_list)], title='T(θ)', xlabel='θ, рад', ylabel='T, км/ч^2')
     chart(x=theta_list, y=W_list[:len(theta_list)], title='W(θ)', xlabel='θ, рад', ylabel='W, км/ч^2')
+
+    #
+    # chart(x=theta_list, y=[i / 3600 / 3600 for i in S_list[:len(theta_list)]], title='S(θ)', xlabel='θ, рад',
+    #       ylabel='S, км/сек^2')
+    # chart(x=theta_list, y=[i / 3600 / 3600 for i in T_list[:len(theta_list)]], title='T(θ)', xlabel='θ, рад',
+    #       ylabel='T, км/сек^2')
+    # chart(x=theta_list, y=[i / 3600 / 3600 for i in W_list[:len(theta_list)]], title='W(θ)', xlabel='θ, рад',
+    #       ylabel='W, км/сек^2')
 
     if H_list:
         chart(x=theta_list, y=H_list[:len(theta_list)], title='H(θ)', xlabel='θ, рад', ylabel='H, км')

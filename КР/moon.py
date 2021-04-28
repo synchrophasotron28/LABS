@@ -30,8 +30,9 @@ omega = math.radians(206.41)
 # Физические характристики
 # ===========================
 mass = 7.3477e22  # kg
-moon_f = 4900.8 * (3600 ** 2)  # km^3/hour^-2
-moon_radius = 1737.10 # km
+moon_f = 4900.8 * (3600 * 3600)  # km^3/hour^-2
+# moon_f = 4900.8  # km^3/hour^-2
+moon_radius = 1737.10  # km
 
 
 # ===========================
@@ -56,7 +57,7 @@ def find_moon_position(t):
     r = functions.get_r(p=p, e=e, theta=theta)
     coord = functions.get_agesk(theta=theta, ra=r, i=i, big_omega=OMEGA, omega=omega)
 
-    return coord
+    return coord, theta
 
 
 # moon_coord 		- кортеж формата (x, y, z)
@@ -102,4 +103,4 @@ def test(hours):
 
 
 if __name__ == '__main__':
-    test(24*365//2)
+    test(24 * 365 // 2)
