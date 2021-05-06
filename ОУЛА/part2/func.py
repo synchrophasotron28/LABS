@@ -1,6 +1,6 @@
 # Правые части систем уравнений для численного интергрирования
-R_x1 = lambda x1, x2, psi1, psi2: 3 * x2
-R_x2 = lambda x1, x2, psi1, psi2: x1 - 1 / (2 * 3) * psi2
+R_x1   = lambda x1, x2, psi1, psi2: 3 * x2
+R_x2   = lambda x1, x2, psi1, psi2: x1 - 1 / (2 * 3) * psi2
 R_psi1 = lambda x1, x2, psi1, psi2: -psi2
 R_psi2 = lambda x1, x2, psi1, psi2: -2 * 2 * x2 - 3 * psi1
 

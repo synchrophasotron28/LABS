@@ -6,8 +6,8 @@ import moon
 
 sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
 
-revolutions = 2 * 4  # Количество оборотов
-theta_list = list(np.arange(0, revolutions * math.pi + d_theta, d_theta))
+revolutions = 2  # Количество оборотов
+theta_list = list(np.arange(0, revolutions * 2 * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []
 OMEGA_list = []
@@ -93,6 +93,7 @@ def iterative_loop():
         moon_coord, moon_theta = moon.find_moon_position(t=current_time)
         spacecraft_coord = get_agesk(theta=theta, ra=r, i=i, big_omega=OMEGA, omega=omega)
 
+        # print(moon_theta)
         moon_X.append(moon_coord[0])
         moon_Y.append(moon_coord[1])
         moon_Z.append(moon_coord[2])
@@ -220,13 +221,13 @@ def main():
     chart(x=theta_list, y=T_list[:len(theta_list)], title='T(θ)', xlabel='θ, рад', ylabel='T, км/ч^2')
     chart(x=theta_list, y=W_list[:len(theta_list)], title='W(θ)', xlabel='θ, рад', ylabel='W, км/ч^2')
 
-    #
-    # chart(x=theta_list, y=[i / 3600 / 3600 for i in S_list[:len(theta_list)]], title='S(θ)', xlabel='θ, рад',
-    #       ylabel='S, км/сек^2')
-    # chart(x=theta_list, y=[i / 3600 / 3600 for i in T_list[:len(theta_list)]], title='T(θ)', xlabel='θ, рад',
-    #       ylabel='T, км/сек^2')
-    # chart(x=theta_list, y=[i / 3600 / 3600 for i in W_list[:len(theta_list)]], title='W(θ)', xlabel='θ, рад',
-    #       ylabel='W, км/сек^2')
+    
+    chart(x=theta_list, y=[i / 3600 / 3600 for i in S_list[:len(theta_list)]], title='S(θ)', xlabel='θ, рад',
+          ylabel='S, км/сек^2')
+    chart(x=theta_list, y=[i / 3600 / 3600 for i in T_list[:len(theta_list)]], title='T(θ)', xlabel='θ, рад',
+          ylabel='T, км/сек^2')
+    chart(x=theta_list, y=[i / 3600 / 3600 for i in W_list[:len(theta_list)]], title='W(θ)', xlabel='θ, рад',
+          ylabel='W, км/сек^2')
 
     if H_list:
         chart(x=theta_list, y=H_list[:len(theta_list)], title='H(θ)', xlabel='θ, рад', ylabel='H, км')
