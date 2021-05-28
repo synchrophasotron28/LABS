@@ -6,7 +6,7 @@ import moon
 
 sigma_x = get_sigma_x(Cxa=C_xa, Sa=Sa, m=m)
 
-revolutions = 2  # Количество оборотов
+revolutions = 4  # Количество оборотов
 theta_list = list(np.arange(0, revolutions * 2 * math.pi + d_theta, d_theta))
 r_list = []
 p_list = []

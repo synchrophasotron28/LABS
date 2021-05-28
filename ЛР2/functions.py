@@ -4,26 +4,40 @@ import numpy as np
 import matplotlib.pyplot as plt
 from constant_data import *
 
-# ФУНКЦИИ ДЛЯ РАССЧЁТА ПАРАМЕТРОВ ОРБИТЫ
-# большая полуось(а)
-# эксцентриситет(е)
-# эксцентрическая аномалия(E)
-# истинная аномалия(theta)
-# модуль радиус-вектора КА в АГЭСК(Ra)
-# фокальный параметр (p)
-# радиальная составляющая вектора скорости (Vr)
-# трансверсальная составляющая вектора скорости (Vr)
-# модуль веткора скорости (V)
-# =======================================================================
+Earth_gravity_potential = 698603 * 3600 * 3600
+
+# Вспомогательные функции
+# ========================================================
 get_a = lambda ra, rp: 0.5 * (ra + rp)
 get_e = lambda ra, rp, a: (ra - rp) / (2 * a)
-get_theta = lambda e, E: 2 * atan(sqrt((1 + e) / (1 - e)) * tan(E / 2))
-get_r = lambda a, e, E: a * (1 - e * cos(E))
+get_r = lambda p, e, theta: p / (1 + e * math.cos(theta))
 get_p = lambda a, e: a * (1 - e ** 2)
-get_Vr = lambda p, theta, e: sqrt(μ / p) * e * sin(theta)
-get_Vt = lambda p, theta, e: sqrt(μ / p) * (1 + e * cos(theta))
-# =======================================================================
+get_Vr = lambda p, theta, e: sqrt(Earth_gravity_potential / p) * e * sin(theta)
+get_Vt = lambda p, theta, e: sqrt(Earth_gravity_potential / p) * (1 + e * cos(theta))
 
+# ========================================================
+
+# Правые части диф уравнений метода оскулирующих элементов
+# =====================================================================================================================
+R_p = lambda r, T, F: 2 * r * T * F
+
+R_OMEGA = lambda W, F, r, p, u, i: W * F * r / p * math.sin(u) / math.sin(i)
+
+R_i = lambda W, F, r, p, u: W * F * r / p * math.cos(u)
+
+R_omega = lambda F, S, theta, e, T, r, p, W, i, u: F * (
+        -S * math.cos(theta) / e + T * (1 + r / p) * math.sin(theta) / e - W * r / p * (1 / math.tan(i)) * math.sin(u))
+
+R_e = lambda F, S, theta, T, r, p, e: F * (S * math.sin(theta) + T * ((1 + r / p) * math.cos(theta) + e * r / p))
+
+R_tau = lambda F, p: F * math.sqrt(Earth_gravity_potential / p)
+
+geT_F = lambda r, S, T, theta, e, p: (Earth_gravity_potential / r ** 2 + S * math.cos(theta) / e - T * (
+        1 + r / p) * math.sin(
+    theta) / e) ** -1
+
+
+# =====================================================================================================================
 
 # Функция для получеения АГЭСК координат
 def get_agesk(theta, ra, i, big_omega, omega):
