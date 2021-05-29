@@ -23,14 +23,14 @@ a = get_a(ra=Earth_radius + h_a, rp=Earth_radius + h_p)
 e = get_e(ra=Earth_radius + h_a, rp=Earth_radius + h_p, a=a)
 p = get_p(a=a, e=e)
 r = get_r(p=p, e=e, theta=0)
-print(r,p,e)
-r_list = []
-p_list = []
-OMEGA_list = []
-i_list = []
-omega_list = []
-e_list = []
-tau_list = []
+# print(r,p,e)
+# r_list = []
+# p_list = []
+# OMEGA_list = []
+# i_list = []
+# omega_list = []
+# e_list = []
+# tau_list = []
 
 flying_objects = {
     'object1':
