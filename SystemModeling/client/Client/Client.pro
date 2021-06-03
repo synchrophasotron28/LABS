@@ -4,8 +4,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
-LIBS+=-lglut32
-LIBS+=-LpathToYourGLUTLib
+#LIBS+=-lglut32
+#LIBS+=-LpathToYourGLUTLib
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -15,14 +15,17 @@ SOURCES += \
     main.cpp \
     mainscene.cpp \
     http.cpp \
+    mainwindow.cpp \
     spaceobject.cpp
 
 HEADERS += \
     mainscene.h \
+    mainwindow.h \
     spaceobject.h \
     http.h
 
-FORMS +=
+FORMS += \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

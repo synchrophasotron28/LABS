@@ -21,6 +21,11 @@ QList<SpaceObject> &HTTP::get_space_objects()
     return spaceObjects;
 }
 
+void HTTP::set_space_objects(QList<SpaceObject> list)
+{
+    spaceObjects = list;
+}
+
 void HTTP::get_response(QNetworkReply *reply)
 {
     QJsonDocument jsonDocument(QJsonDocument::fromJson(reply->readAll()));
@@ -32,6 +37,7 @@ void HTTP::get_response(QNetworkReply *reply)
         SpaceObject spaceobject;
 
         spaceobject.name = key;
+        
         spaceobject.x = jsonObject[key].toObject()["x"].toDouble();
         spaceobject.y = jsonObject[key].toObject()["y"].toDouble();
         spaceobject.z = jsonObject[key].toObject()["z"].toDouble();
@@ -51,6 +57,6 @@ void HTTP::get_response(QNetworkReply *reply)
         spaceObjects << spaceobject;
     }
 
-    qDebug() << "spaceObjects";
-}
+    emit SpaceObjectListUpdated(spaceObjects);
+ }
 

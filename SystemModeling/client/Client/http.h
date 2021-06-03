@@ -23,8 +23,12 @@ public:
 
     QString get_received_json();
     QList<SpaceObject>& get_space_objects();
+    void set_space_objects(QList<SpaceObject> list);
 public slots:
     void get_response(QNetworkReply* reply);
+
+signals:
+    void SpaceObjectListUpdated(QList<SpaceObject> list);
 };
 
 #endif // HTTP_H

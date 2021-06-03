@@ -2,9 +2,15 @@
 
 MainScene::MainScene()
 {
+    _proectionType = Default;
     timer = new QTimer;
     connect(timer, &QTimer::timeout, this, &MainScene::TimerAlarm);
     timer->start(rendering_delay_ms);
+}
+
+MainScene::MainScene(ProectionType type):_proectionType(type)
+{
+
 }
 
 void MainScene::mousePressEvent(QMouseEvent *event)
@@ -59,7 +65,7 @@ void MainScene::paintGL()
 
     // ОСЬ Х
     // ==============================================
-//    glColor3f(158/255.0, 164/255.0, 254/255.0);
+    //    glColor3f(158/255.0, 164/255.0, 254/255.0);
     glColor3f(102/255.0, 204/255.0, 255/255.0);
     glLineWidth(lineWidth);
     glBegin(GL_LINE_STRIP);
@@ -88,18 +94,60 @@ void MainScene::paintGL()
     glEnd();
     // ==============================================
 
-
-//0, 153, 51
-    paintSphere(6371,0,0,0, 0, 204/255.0, 0);
-
-    auto fo = http.get_space_objects();
-    for (int i=0; i<fo.size(); i++)
+    if (_proectionType == Default)
     {
-        if (i%2 == 0)
-            paintSphere(300,fo[i].x , fo[i].y, fo[i].z, 1, 0, 0);
-        else
-            paintSphere(300,fo[i].x , fo[i].y, fo[i].z, 0, 0, 1);
+        paintSphere(6371,0,0,0, 0, 204/255.0, 0);
+
+        auto fo = http.get_space_objects();
+        for (int i=0; i<fo.size(); i++)
+        {
+            if (i%2 == 0)
+                paintSphere(300,fo[i].x , fo[i].y, fo[i].z, 1, 0, 0);
+            else
+                paintSphere(300,fo[i].x , fo[i].y, fo[i].z, 0, 0, 1);
+        }
     }
+    else
+    {
+        auto fo = http.get_space_objects();
+        for (int i=0; i<fo.size(); i++)
+        {
+            switch (_proectionType) {
+            case XOY:
+            {
+                if (i % 2 == 0)
+                    paintSphere(300,fo[i].x , fo[i].y, 0, 1, 0, 0);
+                else
+                    paintSphere(300,fo[i].x , fo[i].y, 0, 0, 0, 1);
+                break;
+            }
+
+            case XOZ:
+            {
+                if (i % 2 == 0)
+                    paintSphere(300,fo[i].x , fo[i].z, 0, 1, 0, 0);
+                else
+                    paintSphere(300,fo[i].x , fo[i].z, 0, 0, 0, 1);
+                break;
+            }
+
+            case YOZ:
+            {
+                if (i % 2 == 0)
+                    paintSphere(300,fo[i].y , fo[i].z, 0, 1, 0, 0);
+                else
+                    paintSphere(300,fo[i].y , fo[i].z, 0, 0, 0, 1);
+                break;
+            }
+
+            }
+
+        }
+    }
+
+
+
+
 }
 
 void MainScene::paintSphere(double radius, double X0, double Y0 ,double Z0, float red, float green, float blue)
@@ -148,6 +196,13 @@ void MainScene::TimerAlarm()
     http.send_request(url);
 
 
+    paintGL();
+    updateGL();
+}
+
+void MainScene::SetSpaceObjectList(QList<SpaceObject> list)
+{
+    http.set_space_objects(list);
     paintGL();
     updateGL();
 }
