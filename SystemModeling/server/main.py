@@ -4,7 +4,13 @@ import math
 from functions import *
 from time import sleep
 import threading
+from SqliteLogger import *
+import os
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
+if not os.path.exists(os.getcwd()+'\logs'):
+    os.mkdir('./logs')
+print(os.getcwd())
 d_theta = 1e-2
 
 DELAY_IN_SECS = .05
@@ -16,21 +22,12 @@ DELAY_IN_SECS = .05
 h_a = 2500
 h_p = 700
 
-
 Earth_radius = 6371
 
 a = get_a(ra=Earth_radius + h_a, rp=Earth_radius + h_p)
 e = get_e(ra=Earth_radius + h_a, rp=Earth_radius + h_p, a=a)
 p = get_p(a=a, e=e)
 r = get_r(p=p, e=e, theta=0)
-# print(r,p,e)
-# r_list = []
-# p_list = []
-# OMEGA_list = []
-# i_list = []
-# omega_list = []
-# e_list = []
-# tau_list = []
 
 flying_objects = {
     'object1':
@@ -75,11 +72,19 @@ flying_objects = {
 
 
 def loop():
-    print('start')
+    database_name = get_unique_name()
+    conn = sqlite3.connect('./logs/'+database_name)
+    cursor = conn.cursor()
     while True:
         for key in flying_objects.keys():
-            r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
+            # Создание таблицы в Sqlite3
+            # ========================================
+            create_query = get_create_table_query(key)
+            cursor.execute(create_query)
+            conn.commit()
+            # ========================================
 
+            r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
             r = flying_objects[key]['r']
             p = flying_objects[key]['p']
             OMEGA = flying_objects[key]['OMEGA']
@@ -114,6 +119,16 @@ def loop():
             flying_objects[key]['x'] = x
             flying_objects[key]['y'] = y
             flying_objects[key]['z'] = z
+            m = flying_objects[key]['m']
+
+            # Фиксация итерации в таблице Sqlite3
+            # ==============================================================================
+            insert_query = get_insert_query(key, x, y, z, theta, r1, p1, OMEGA1, omega1, e1, tau1, m, i1)
+            # insert_query.format(key, x, y, z, theta, r1, p1, OMEGA1, omega1, e1, tau1, m, i1)
+            cursor.execute(insert_query)
+            conn.commit()
+            # ==============================================================================
+
         sleep(DELAY_IN_SECS)
 
 
