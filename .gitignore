@@ -6,9 +6,18 @@ test.docx
 __pycache__/
 *.py[cod]
 *$py.class
-
+logs
 # C extensions
 *.so
+
+# QT building
+# ==================================================
+build-Client-Desktop_Qt_5_15_2_MinGW_64_bit-Release
+build-Client-Desktop_Qt_5_15_2_MinGW_64_bit-Debug
+build-Client-Desktop_Qt_5_15_2_MinGW_32_bit-Release
+build-Client-Desktop_Qt_5_15_2_MinGW_32_bit-Debug
+# ==================================================
+
 
 # Distribution / packaging
 .Python
