@@ -39,21 +39,21 @@ void MainWindow::InitTable()
     ui->SpaceObjectTable->setRowCount(0);
     ui->SpaceObjectTable->setColumnCount(0);
 
-    ui->SpaceObjectTable->setColumnCount(16);
+    ui->SpaceObjectTable->setColumnCount(16-3);
 
     horizontalHeaders << "Название";
     horizontalHeaders << "x";
     horizontalHeaders << "y";
     horizontalHeaders << "z";
     horizontalHeaders << "theta";
-    horizontalHeaders << "h_p";
-    horizontalHeaders << "h_a";
+//    horizontalHeaders << "h_p";
+//    horizontalHeaders << "h_a";
     horizontalHeaders << "r";
     horizontalHeaders << "p";
     horizontalHeaders << "OMEGA";
     horizontalHeaders << "omega";
     horizontalHeaders << "e";
-    horizontalHeaders << "U";
+//    horizontalHeaders << "U";
     horizontalHeaders << "Tau";
     horizontalHeaders << "m";
     horizontalHeaders << "i";
@@ -83,16 +83,16 @@ void MainWindow::RenderSpaceObjectTable(QList<SpaceObject> list)
         ui->SpaceObjectTable->setItem(i, 2, new QTableWidgetItem(QString::number(list[i].y)));
         ui->SpaceObjectTable->setItem(i, 3, new QTableWidgetItem(QString::number(list[i].z)));
         ui->SpaceObjectTable->setItem(i, 4, new QTableWidgetItem(QString::number(list[i].theta)));
-        ui->SpaceObjectTable->setItem(i, 5, new QTableWidgetItem(QString::number(list[i].h_p)));
-        ui->SpaceObjectTable->setItem(i, 6, new QTableWidgetItem(QString::number(list[i].h_a)));
-        ui->SpaceObjectTable->setItem(i, 7, new QTableWidgetItem(QString::number(list[i].r)));
-        ui->SpaceObjectTable->setItem(i, 8, new QTableWidgetItem(QString::number(list[i].p)));
-        ui->SpaceObjectTable->setItem(i, 9, new QTableWidgetItem(QString::number(list[i].OMEGA)));
-        ui->SpaceObjectTable->setItem(i, 10, new QTableWidgetItem(QString::number(list[i].omega)));
-        ui->SpaceObjectTable->setItem(i, 11, new QTableWidgetItem(QString::number(list[i].e)));
-        ui->SpaceObjectTable->setItem(i, 12, new QTableWidgetItem(QString::number(list[i].U)));
-        ui->SpaceObjectTable->setItem(i, 13, new QTableWidgetItem(QString::number(list[i].tau)));
-        ui->SpaceObjectTable->setItem(i, 14, new QTableWidgetItem(QString::number(list[i].m)));
-        ui->SpaceObjectTable->setItem(i, 15, new QTableWidgetItem(QString::number(list[i].i)));
+//        ui->SpaceObjectTable->setItem(i, 5, new QTableWidgetItem(QString::number(list[i].h_p)));
+//        ui->SpaceObjectTable->setItem(i, 6, new QTableWidgetItem(QString::number(list[i].h_a)));
+        ui->SpaceObjectTable->setItem(i, 5, new QTableWidgetItem(QString::number(list[i].r)));
+        ui->SpaceObjectTable->setItem(i, 6, new QTableWidgetItem(QString::number(list[i].p)));
+        ui->SpaceObjectTable->setItem(i, 7, new QTableWidgetItem(QString::number(list[i].OMEGA)));
+        ui->SpaceObjectTable->setItem(i, 8, new QTableWidgetItem(QString::number(list[i].omega)));
+        ui->SpaceObjectTable->setItem(i, 9, new QTableWidgetItem(QString::number(list[i].e)));
+//        ui->SpaceObjectTable->setItem(i, 12, new QTableWidgetItem(QString::number(list[i].U)));
+        ui->SpaceObjectTable->setItem(i, 10, new QTableWidgetItem(QString::number(list[i].tau)));
+        ui->SpaceObjectTable->setItem(i, 11, new QTableWidgetItem(QString::number(list[i].m)));
+        ui->SpaceObjectTable->setItem(i, 12, new QTableWidgetItem(QString::number(list[i].i)));
     }
 }
