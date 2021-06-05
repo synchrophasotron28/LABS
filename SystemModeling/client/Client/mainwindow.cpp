@@ -62,6 +62,7 @@ void MainWindow::InitTable()
     ui->SpaceObjectTable->setRowCount(1);
 
 //    ui->SpaceObjectTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+//    ui->SpaceObjectTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 }
 
 void MainWindow::RenderSpaceObjectTable(QList<SpaceObject> list)

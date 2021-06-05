@@ -32,10 +32,10 @@
          <item row="0" column="0">
           <widget class="QTableWidget" name="SpaceObjectTable">
            <property name="styleSheet">
-            <string notr="true">/*QHeaderView::section {
-    background-color: #646464;
+            <string notr="true">QHeaderView::section {
+    background-color: rgb(140, 140, 140);
     padding: 4px;
-    font-size: 14pt;
+    font-size: 10pt;
     border-style: none;
     border-bottom: 1px solid #fffff8;
     border-right: 1px solid #fffff8;
@@ -50,8 +50,10 @@ QHeaderView::section:vertical
 {
     border-left: 1px solid #fffff8;
 }
-*/
-
+QTableWidget{
+       font-size: 10pt;
+}
+/*
 QHeaderView::section {
        background-color: #DAF2F7;
        padding: 4px;
@@ -70,7 +72,7 @@ QTableWidget {
 	   border: 0px solid #fffff8;
        font-size: 12pt;
 
-		/*selection-background-color:#52b3d9;*/
+	&lt;!--selection-background-color:#52b3d9--&gt;
 		selection-background-color:#a4cad9;
 		selection-color:#1f3a93;
 }
@@ -116,7 +118,7 @@ QTableView
  QTreeView::item:selected:!active {
      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
  }
-</string>
+*/</string>
            </property>
            <property name="showGrid">
             <bool>true</bool>

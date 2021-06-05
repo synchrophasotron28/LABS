@@ -81,7 +81,7 @@ def loop():
             # ========================================
             create_query = get_create_table_query(key)
             cursor.execute(create_query)
-            conn.commit()
+            # conn.commit()
             # ========================================
 
             r1 = p1 = OMEGA1 = omega1 = i1 = e1 = tau1 = 0
@@ -126,9 +126,10 @@ def loop():
             insert_query = get_insert_query(key, x, y, z, theta, r1, p1, OMEGA1, omega1, e1, tau1, m, i1)
             # insert_query.format(key, x, y, z, theta, r1, p1, OMEGA1, omega1, e1, tau1, m, i1)
             cursor.execute(insert_query)
-            conn.commit()
+            # conn.commit()
             # ==============================================================================
 
+        conn.commit()
         sleep(DELAY_IN_SECS)
 
 
