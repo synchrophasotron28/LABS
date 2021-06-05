@@ -9,7 +9,7 @@ __pycache__/
 logs
 # C extensions
 *.so
-
+presentation
 # QT building
 # ==================================================
 build-Client-Desktop_Qt_5_15_2_MinGW_64_bit-Release
