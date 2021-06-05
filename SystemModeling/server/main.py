@@ -95,6 +95,9 @@ def loop():
             theta = flying_objects[key]['theta']
 
             S = T = W = 0
+            T = T1(r=r, i=i, u=theta + omega)
+            S = S1(r=r, i=i, u=theta + omega)
+            W = W1(r=r, i=i, u=theta + omega)
             F = geT_F(r=r, S=S, T=T, theta=theta, e=e, p=p)
 
             p1 = p + R_p(r=r, T=T, F=F) * d_theta

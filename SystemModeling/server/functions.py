@@ -7,7 +7,7 @@ Earth_gravity_potential = 698603 * 3600 * 3600
 # Формулы для рассчёта компонентов возмущающего ускорения,
 # вызванного нецентральность гравитационного поля Земли
 # ===================================================================================
-# Epsilon = Earth_gravity_potential * 66.07 * 1e3
+Epsilon = Earth_gravity_potential * 66.07 * 1e3
 S1 = lambda r, i, u: Epsilon / r ** 4 * (3 * math.sin(i) ** 2 * math.sin(u) ** 2 - 1)
 T1 = lambda r, i, u: -Epsilon / r ** 4 * math.sin(i) ** 2 * math.sin(2 * u)
 W1 = lambda r, i, u: -Epsilon / r ** 4 * math.sin(2 * i) * math.sin(u)
