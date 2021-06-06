@@ -1,7 +1,10 @@
 .idea
 
 test.docx
-./SystemModeling/client/build-Client*
+
+SystemModeling/client/build-Client-Desktop_Qt_5_15_2_MinGW_64_bit-Debug
+SystemModeling/client/build-Client-Desktop_Qt_5_15_2_MinGW_32_bit-Debug
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
