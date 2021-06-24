@@ -6,9 +6,10 @@ from time import sleep
 import threading
 from SqliteLogger import *
 import os
+
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-if not os.path.exists(os.getcwd()+'\logs'):
+if not os.path.exists(os.getcwd() + '\logs'):
     os.mkdir('./logs')
 print(os.getcwd())
 d_theta = 1e-2
@@ -73,7 +74,7 @@ flying_objects = {
 
 def loop():
     database_name = get_unique_name()
-    conn = sqlite3.connect('./logs/'+database_name)
+    conn = sqlite3.connect('./logs/' + database_name)
     cursor = conn.cursor()
     while True:
         for key in flying_objects.keys():
